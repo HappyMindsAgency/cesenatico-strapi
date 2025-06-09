@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_servizi_balneari_wellnesses",
+  "info": {
+    "displayName": "balneariWellness",
+    "icon": "seed"
+  },
+  "options": {},
+  "attributes": {
+    "offertaWellness": {
+      "type": "boolean",
+      "default": false
+    },
+    "serviziWellness": {
+      "type": "boolean",
+      "default": false
+    },
+    "elioterapia": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

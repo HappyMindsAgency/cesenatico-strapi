@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "Link/Pulsante",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "testoLink": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string"
+    },
+    "targetBlank": {
+      "type": "boolean"
+    }
+  }
+}

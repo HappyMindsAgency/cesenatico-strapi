@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_servizi_balneari_enogastronomias",
+  "info": {
+    "displayName": "balneariEnogastronomia",
+    "icon": "restaurant"
+  },
+  "options": {},
+  "attributes": {
+    "ospitiEsterni": {
+      "type": "boolean",
+      "default": false
+    },
+    "menuInglese": {
+      "type": "boolean",
+      "default": false
+    },
+    "piattiLocali": {
+      "type": "boolean",
+      "default": false
+    },
+    "provenienzaLocale": {
+      "type": "boolean",
+      "default": false
+    },
+    "prenotazioneOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "pescatoLocale": {
+      "type": "boolean",
+      "default": false
+    },
+    "menuBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiBio": {
+      "type": "boolean",
+      "default": false
+    },
+    "glutenFree": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

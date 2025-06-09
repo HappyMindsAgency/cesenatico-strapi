@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_logo_clientes",
+  "info": {
+    "displayName": "logoCliente",
+    "icon": "walk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

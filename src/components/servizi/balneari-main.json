@@ -1,0 +1,84 @@
+{
+  "collectionName": "components_servizi_balneari_mains",
+  "info": {
+    "displayName": "balneariMain",
+    "icon": "sun"
+  },
+  "options": {},
+  "attributes": {
+    "barRistorazione": {
+      "type": "boolean",
+      "default": false
+    },
+    "cucinaGlutenFree": {
+      "type": "boolean",
+      "default": false
+    },
+    "cucinaVegetariana": {
+      "type": "boolean",
+      "default": false
+    },
+    "parcheggio": {
+      "type": "boolean",
+      "default": false
+    },
+    "petFriendly": {
+      "type": "boolean",
+      "default": false
+    },
+    "wifi": {
+      "type": "boolean",
+      "default": false
+    },
+    "strutturaAccessibile": {
+      "type": "boolean",
+      "default": false
+    },
+    "adattoGruppi": {
+      "type": "boolean",
+      "default": false
+    },
+    "serviziFamiglia": {
+      "type": "boolean",
+      "default": false
+    },
+    "ombrelloneLettini": {
+      "type": "boolean",
+      "default": false
+    },
+    "canoeSupPedalo": {
+      "type": "boolean",
+      "default": false
+    },
+    "corsiSportivi": {
+      "type": "boolean"
+    },
+    "animazione": {
+      "type": "boolean"
+    },
+    "serviziDisabilita": {
+      "type": "boolean",
+      "default": false
+    },
+    "eventiSpiaggia": {
+      "type": "boolean",
+      "default": false
+    },
+    "servizioSpiaggia": {
+      "type": "boolean",
+      "default": false
+    },
+    "spiaggiaAccessibile": {
+      "type": "boolean",
+      "default": false
+    },
+    "prenotazioneServiziOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "pagamentiElettronici": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

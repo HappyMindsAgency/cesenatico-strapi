@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_navigazione_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nameItem": {
+      "type": "string"
+    },
+    "genitore": {
+      "type": "component",
+      "repeatable": false,
+      "component": "navigazione.link-item"
+    },
+    "megamenu": {
+      "type": "boolean",
+      "default": false
+    },
+    "figli": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.logo-cliente"
+    }
+  }
+}

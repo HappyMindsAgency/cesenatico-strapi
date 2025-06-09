@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_servizi_balneari_families",
+  "info": {
+    "displayName": "balneariFamily",
+    "icon": "puzzle"
+  },
+  "options": {},
+  "attributes": {
+    "areaBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "ausiliPasseggino": {
+      "type": "boolean",
+      "default": false
+    },
+    "fasciatoioPasseggino": {
+      "type": "boolean",
+      "default": false
+    },
+    "scaldaBiberon": {
+      "type": "boolean",
+      "default": false
+    },
+    "primoSoccorso": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

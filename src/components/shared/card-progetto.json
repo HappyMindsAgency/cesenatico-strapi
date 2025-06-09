@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_card_progettos",
+  "info": {
+    "displayName": "CardProgetto",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "sottotitolo": {
+      "type": "string"
+    },
+    "descrizione": {
+      "type": "richtext"
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaProgetto": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}
