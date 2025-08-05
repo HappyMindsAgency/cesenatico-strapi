@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_servizi_ricettivo_wellbeings",
+  "info": {
+    "displayName": "ricettivoWellbeing",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "reception24h": {
+      "type": "boolean",
+      "default": false
+    },
+    "lavanderia": {
+      "type": "boolean",
+      "default": false
+    },
+    "convenzioneStabilimenti": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiLocali": {
+      "type": "boolean",
+      "default": false
+    },
+    "escursioniBenessere": {
+      "type": "boolean"
+    },
+    "omaggioBenessere": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

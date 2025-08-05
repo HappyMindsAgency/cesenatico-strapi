@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_appartamentis",
+  "info": {
+    "displayName": "filtriAppartamenti",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.appartamenti-main",
+      "repeatable": false
+    },
+    "family": {
+      "type": "component",
+      "component": "servizi.appartamenti-family",
+      "repeatable": false
+    },
+    "sport": {
+      "type": "component",
+      "component": "servizi.appartamenti-sport",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

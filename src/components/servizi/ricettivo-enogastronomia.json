@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_servizi_ricettivo_enogastronomies",
+  "info": {
+    "displayName": "ricettivoEnogastronomia",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "piattiTradizionali": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiLocali": {
+      "type": "boolean",
+      "default": false
+    },
+    "pescatoLocale": {
+      "type": "boolean",
+      "default": false
+    },
+    "menuBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiBio": {
+      "type": "boolean"
+    },
+    "cucinaGlutenFree": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_ricettivos",
+  "info": {
+    "displayName": "filtriRicettivo",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.ricettivo-main",
+      "repeatable": false
+    },
+    "family": {
+      "type": "component",
+      "component": "servizi.ricettivo-family",
+      "repeatable": false
+    },
+    "sport": {
+      "type": "component",
+      "component": "servizi.ricettivo-sport",
+      "repeatable": false
+    },
+    "enogastronomia": {
+      "type": "component",
+      "component": "servizi.ricettivo-enogastronomia",
+      "repeatable": false
+    },
+    "wellbeing": {
+      "type": "component",
+      "component": "servizi.ricettivo-wellbeing",
+      "repeatable": false
+    },
+    "premium": {
+      "type": "component",
+      "component": "servizi.ricettivo-premium",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

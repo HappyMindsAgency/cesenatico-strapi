@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_servizi_appartamenti_sports",
+  "info": {
+    "displayName": "appartamentiSport",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "previsioniMeteo": {
+      "type": "boolean",
+      "default": false
+    },
+    "fisioterapiaMassaggi": {
+      "type": "boolean",
+      "default": false
+    },
+    "kitRiparazione": {
+      "type": "boolean",
+      "default": false
+    },
+    "noleggioAttrezzatura": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_servizi_ricettivo_families",
+  "info": {
+    "displayName": "ricettivoFamily",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "scaldaBiberon": {
+      "type": "boolean",
+      "default": false
+    },
+    "culla": {
+      "type": "boolean",
+      "default": false
+    },
+    "seggiolone": {
+      "type": "boolean",
+      "default": false
+    },
+    "camereFamily": {
+      "type": "boolean",
+      "default": false
+    },
+    "tariffeFamily": {
+      "type": "boolean"
+    },
+    "alimentiBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "noleggioPasseggini": {
+      "type": "boolean",
+      "default": false
+    },
+    "sponde": {
+      "type": "boolean",
+      "default": false
+    },
+    "giochiBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "vaschettaNeonati": {
+      "type": "boolean",
+      "default": false
+    },
+    "fasciatoio": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

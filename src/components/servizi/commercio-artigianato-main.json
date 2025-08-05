@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_servizi_commercio_artigianato_mains",
+  "info": {
+    "displayName": "commercioArtigianatoMain",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "prodottiTipici": {
+      "type": "boolean",
+      "default": false
+    },
+    "artigianatoLocale": {
+      "type": "boolean",
+      "default": false
+    },
+    "laboratoriWorkshopCorsi": {
+      "type": "boolean",
+      "default": false
+    },
+    "produzione": {
+      "type": "boolean",
+      "default": false
+    },
+    "venditaOnline": {
+      "type": "boolean"
+    },
+    "spedizione": {
+      "type": "boolean",
+      "default": false
+    },
+    "pacchettiRegalo": {
+      "type": "boolean",
+      "default": false
+    },
+    "multilingua": {
+      "type": "boolean",
+      "default": false
+    },
+    "serviziFamily": {
+      "type": "boolean",
+      "default": false
+    },
+    "strutturaAccessibile": {
+      "type": "boolean",
+      "default": false
+    },
+    "degustazioni": {
+      "type": "boolean",
+      "default": false
+    },
+    "visiteGuidate": {
+      "type": "boolean",
+      "default": false
+    },
+    "parcheggio": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

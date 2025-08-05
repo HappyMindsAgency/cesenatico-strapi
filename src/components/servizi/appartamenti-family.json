@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_servizi_appartamenti_families",
+  "info": {
+    "displayName": "appartamentiFamily",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "scaldaBiberon": {
+      "type": "boolean",
+      "default": false
+    },
+    "culla": {
+      "type": "boolean",
+      "default": false
+    },
+    "tariffeFamily": {
+      "type": "boolean",
+      "default": false
+    },
+    "vaschettaNeonati": {
+      "type": "boolean",
+      "default": false
+    },
+    "sponde": {
+      "type": "boolean"
+    },
+    "giochiBambini": {
+      "type": "boolean",
+      "default": false
+    },
+    "fasciatoio": {
+      "type": "boolean",
+      "default": false
+    },
+    "noleggioPasseggini": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

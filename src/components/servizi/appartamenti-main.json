@@ -1,47 +1,31 @@
 {
-  "collectionName": "components_servizi_balneari_mains",
+  "collectionName": "components_servizi_appartamenti_mains",
   "info": {
-    "displayName": "balneariMain",
-    "icon": "sun"
+    "displayName": "appartamentiMain",
+    "icon": "gate"
   },
   "options": {},
   "attributes": {
-    "adattoGruppi": {
+    "ariaCondizionata": {
       "type": "boolean",
       "default": false
     },
-    "animazione": {
+    "cucinaAttrezzata": {
       "type": "boolean",
       "default": false
     },
-    "barRistorazione": {
+    "lavatrice": {
       "type": "boolean",
       "default": false
     },
-    "canoeSupPedalo": {
+    "lavastoviglie": {
       "type": "boolean",
       "default": false
     },
-    "corsiSportivi": {
+    "wifi": {
       "type": "boolean"
     },
-    "cucinaGlutenFree": {
-      "type": "boolean",
-      "default": false
-    },
-    "cucinaVegetariana": {
-      "type": "boolean",
-      "default": false
-    },
-    "eventiSpiaggia": {
-      "type": "boolean",
-      "default": false
-    },
-    "ombrelloneLettini": {
-      "type": "boolean",
-      "default": false
-    },
-    "pagamentiElettronici": {
+    "tvSmartTv": {
       "type": "boolean",
       "default": false
     },
@@ -49,35 +33,39 @@
       "type": "boolean",
       "default": false
     },
+    "spaziEsterni": {
+      "type": "boolean",
+      "default": false
+    },
     "petFriendly": {
       "type": "boolean",
       "default": false
     },
-    "prenotazioneServiziOnline": {
+    "serviziFamily": {
       "type": "boolean",
       "default": false
     },
-    "serviziFamiglia": {
+    "serviziPulizie": {
       "type": "boolean",
       "default": false
     },
-    "serviziDisabilita": {
+    "accessibile": {
       "type": "boolean",
       "default": false
     },
-    "serviziSpiaggia": {
+    "vistaMare": {
       "type": "boolean",
       "default": false
     },
-    "spiaggiaAccessibile": {
+    "equipSpiaggia": {
       "type": "boolean",
       "default": false
     },
-    "strutturaAccessibile": {
+    "primoSoccorso": {
       "type": "boolean",
       "default": false
     },
-    "wifi": {
+    "microonde": {
       "type": "boolean",
       "default": false
     }

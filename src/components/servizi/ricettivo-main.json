@@ -1,47 +1,31 @@
 {
-  "collectionName": "components_servizi_balneari_mains",
+  "collectionName": "components_servizi_ricettivo_mains",
   "info": {
-    "displayName": "balneariMain",
-    "icon": "sun"
+    "displayName": "ricettivoMain",
+    "icon": "gate"
   },
   "options": {},
   "attributes": {
-    "adattoGruppi": {
+    "ristorazione": {
       "type": "boolean",
       "default": false
     },
-    "animazione": {
+    "spa": {
       "type": "boolean",
       "default": false
     },
-    "barRistorazione": {
+    "allInclusive": {
       "type": "boolean",
       "default": false
-    },
-    "canoeSupPedalo": {
-      "type": "boolean",
-      "default": false
-    },
-    "corsiSportivi": {
-      "type": "boolean"
     },
     "cucinaGlutenFree": {
       "type": "boolean",
       "default": false
     },
     "cucinaVegetariana": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
     },
-    "eventiSpiaggia": {
-      "type": "boolean",
-      "default": false
-    },
-    "ombrelloneLettini": {
-      "type": "boolean",
-      "default": false
-    },
-    "pagamentiElettronici": {
+    "piscina": {
       "type": "boolean",
       "default": false
     },
@@ -53,23 +37,23 @@
       "type": "boolean",
       "default": false
     },
-    "prenotazioneServiziOnline": {
+    "serviziBike": {
       "type": "boolean",
       "default": false
     },
-    "serviziFamiglia": {
+    "serviziFamily": {
       "type": "boolean",
       "default": false
     },
-    "serviziDisabilita": {
+    "adultsOnly": {
       "type": "boolean",
       "default": false
     },
-    "serviziSpiaggia": {
+    "wifi": {
       "type": "boolean",
       "default": false
     },
-    "spiaggiaAccessibile": {
+    "ariaCondizionata": {
       "type": "boolean",
       "default": false
     },
@@ -77,7 +61,23 @@
       "type": "boolean",
       "default": false
     },
-    "wifi": {
+    "vistaMare": {
+      "type": "boolean",
+      "default": false
+    },
+    "cucinaTipica": {
+      "type": "boolean",
+      "default": false
+    },
+    "serviziSport": {
+      "type": "boolean",
+      "default": false
+    },
+    "serviziSpiaggia": {
+      "type": "boolean",
+      "default": false
+    },
+    "escursioni": {
       "type": "boolean",
       "default": false
     }

@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_servizi_ricettivo_sports",
+  "info": {
+    "displayName": "ricettivoSport",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "flessibilitaOrariPasti": {
+      "type": "boolean",
+      "default": false
+    },
+    "pastiAlSacco": {
+      "type": "boolean",
+      "default": false
+    },
+    "ristorazioneSportiva": {
+      "type": "boolean",
+      "default": false
+    },
+    "lavanderia": {
+      "type": "boolean",
+      "default": false
+    },
+    "custodiaAttrezzature": {
+      "type": "boolean"
+    },
+    "areaFitness": {
+      "type": "boolean",
+      "default": false
+    },
+    "convenzioniFisioterapiaMassaggi": {
+      "type": "boolean",
+      "default": false
+    },
+    "kitRiparazione": {
+      "type": "boolean",
+      "default": false
+    },
+    "noleggioAttrezzatura": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiEnergetici": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

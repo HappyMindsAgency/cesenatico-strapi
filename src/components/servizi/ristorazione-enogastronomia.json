@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_servizi_ristorazione_enogastronomies",
+  "info": {
+    "displayName": "ristorazioneEnogastronomia",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "piattiTradizionali": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiLocali": {
+      "type": "boolean",
+      "default": false
+    },
+    "pescatoLocale": {
+      "type": "boolean",
+      "default": false
+    },
+    "prodottiBio": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

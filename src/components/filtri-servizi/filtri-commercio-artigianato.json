@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_commercio_artigianatos",
+  "info": {
+    "displayName": "filtriCommercioArtigianato",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.commercio-artigianato-main",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

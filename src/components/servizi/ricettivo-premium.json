@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_servizi_ricettivo_premiums",
+  "info": {
+    "displayName": "ricettivoPremium",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "reception24h": {
+      "type": "boolean",
+      "default": false
+    },
+    "lavanderia": {
+      "type": "boolean",
+      "default": false
+    },
+    "benessereFitnessSpaPiscina": {
+      "type": "boolean",
+      "default": false
+    },
+    "omaggioBenessere": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

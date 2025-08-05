@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_ristoraziones",
+  "info": {
+    "displayName": "filtriRistorazione",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.ristorazione-main",
+      "repeatable": false
+    },
+    "enogastronomia": {
+      "type": "component",
+      "component": "servizi.ristorazione-enogastronomia",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
