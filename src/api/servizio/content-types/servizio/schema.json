@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servizi",
+  "info": {
+    "singularName": "servizio",
+    "pluralName": "servizi",
+    "displayName": "Servizio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "idNome": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "icona": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": "bi bi-rocket-takeoff",
+      "required": true
+    }
+  }
+}

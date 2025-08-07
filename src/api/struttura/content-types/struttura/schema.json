@@ -1,0 +1,227 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strutture",
+  "info": {
+    "singularName": "struttura",
+    "pluralName": "strutture",
+    "displayName": "Struttura"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "cover": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descrizione": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "galleria": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "indirizzo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "localita": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "pivaCode": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "cinCode": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "cfCode": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "telefono": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "sitoWeb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "facebook": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "instagram": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "filtriServizi": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "filtri-servizi.filtri-servizi",
+      "repeatable": false
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "struttura"
+    },
+    "offerta": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::offerta.offerta",
+      "mappedBy": "struttura"
+    },
+    "categoria_struttura": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria-struttura.categoria-struttura",
+      "inversedBy": "struttura"
+    },
+    "tipologia_struttura": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipologia-struttura.tipologia-struttura",
+      "inversedBy": "struttura"
+    },
+    "classificazione_struttura": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::classificazione-struttura.classificazione-struttura",
+      "inversedBy": "struttura"
+    },
+    "operatore": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::operatore.operatore",
+      "inversedBy": "struttura"
+    },
+    "strutturaPlus": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
+    },
+    "attiva": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    }
+  }
+}

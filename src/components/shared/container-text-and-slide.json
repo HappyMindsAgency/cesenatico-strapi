@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_container_text_and_slides",
+  "info": {
+    "displayName": "ContainerText&Slide",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "riga": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-and-slide"
+    }
+  }
+}

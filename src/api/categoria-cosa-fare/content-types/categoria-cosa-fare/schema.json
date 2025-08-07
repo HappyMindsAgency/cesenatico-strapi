@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_cosa_fare",
+  "info": {
+    "singularName": "categoria-cosa-fare",
+    "pluralName": "categorie-cosa-fare",
+    "displayName": "Categoria CosaFare"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "cover": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "intro": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.intro",
+      "repeatable": false
+    },
+    "offerteTitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "offerteSottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "offerta": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::offerta.offerta",
+      "inversedBy": "categoria_cosafare"
+    },
+    "experienceTitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "experienceSottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::experience.experience",
+      "inversedBy": "categoria_cosafare"
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
+    }
+  }
+}

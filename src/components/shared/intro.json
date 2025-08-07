@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_intros",
+  "info": {
+    "displayName": "intro",
+    "icon": "pin"
+  },
+  "options": {},
+  "attributes": {
+    "occhiello": {
+      "type": "string"
+    },
+    "testo": {
+      "type": "richtext"
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

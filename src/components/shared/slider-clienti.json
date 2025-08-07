@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_slider_clientis",
+  "info": {
+    "displayName": "sliderClienti",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "cliente": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.logo-cliente"
+    }
+  }
+}

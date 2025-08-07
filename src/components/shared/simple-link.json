@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_simple_links",
+  "info": {
+    "displayName": "SimpleLink",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "class": {
+      "type": "string"
+    }
+  }
+}

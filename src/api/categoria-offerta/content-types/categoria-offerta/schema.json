@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_offerta",
+  "info": {
+    "singularName": "categoria-offerta",
+    "pluralName": "categorie-offerta",
+    "displayName": "Categoria Offerta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "offerta": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::offerta.offerta",
+      "inversedBy": "categoria_offerta"
+    }
+  }
+}

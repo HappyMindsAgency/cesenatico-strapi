@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_documentos",
+  "info": {
+    "displayName": "Documento",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "file": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

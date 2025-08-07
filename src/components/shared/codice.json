@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_codices",
+  "info": {
+    "displayName": "Codice",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "text"
+    },
+    "titolo": {
+      "type": "string"
+    },
+    "head": {
+      "type": "text"
+    },
+    "idAncora": {
+      "type": "string"
+    }
+  }
+}

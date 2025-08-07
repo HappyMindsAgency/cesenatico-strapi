@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_info_and_iconas",
+  "info": {
+    "displayName": "info&icona",
+    "icon": "chartCircle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icona": {
+      "type": "text",
+      "default": "https://fontawesome.com/search?q=cerca&o=r&ic=free"
+    },
+    "info": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

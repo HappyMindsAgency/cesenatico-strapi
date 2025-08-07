@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_magellans",
+  "info": {
+    "displayName": "Magellan",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "collegamenti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.simple-link"
+    }
+  }
+}

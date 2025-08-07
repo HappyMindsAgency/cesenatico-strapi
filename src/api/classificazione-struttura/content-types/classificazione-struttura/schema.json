@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classificazione_strutture",
+  "info": {
+    "singularName": "classificazione-struttura",
+    "pluralName": "classificazione-strutture",
+    "displayName": "Classificazione Struttura"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::struttura.struttura",
+      "mappedBy": "classificazione_struttura"
+    }
+  }
+}

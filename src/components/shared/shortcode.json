@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_shortcodes",
+  "info": {
+    "displayName": "Shortcode",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "quantita": {
+      "type": "integer",
+      "default": 3
+    },
+    "entita": {
+      "type": "enumeration",
+      "enum": [
+        "Attività",
+        "Experience",
+        "POI"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_download",
+  "info": {
+    "singularName": "categoria-download",
+    "pluralName": "categorie-download",
+    "displayName": "Categoria Download"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "downloads": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::download.download",
+      "inversedBy": "categoria_downloads"
+    }
+  }
+}

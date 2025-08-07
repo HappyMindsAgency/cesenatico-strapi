@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_esplora",
+  "info": {
+    "singularName": "categoria-esplora",
+    "pluralName": "categorie-esplora",
+    "displayName": "Categoria Esplora"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "cover": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "intro": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.intro",
+      "repeatable": false
+    },
+    "articoliTitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articoliSottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articolo": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::articolo.articolo",
+      "mappedBy": "categoria_esplora"
+    },
+    "poiTitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "poiSottotitolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "poi": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::poi.poi",
+      "inversedBy": "categoria_esplora"
+    },
+    "categoria_cosafare": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria-cosa-fare.categoria-cosa-fare"
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
+    }
+  }
+}

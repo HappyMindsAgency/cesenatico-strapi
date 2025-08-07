@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_video_headers",
+  "info": {
+    "displayName": "VideoHeader",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
+    },
+    "descrizione": {
+      "type": "richtext"
+    },
+    "sottotitolo": {
+      "type": "text"
+    },
+    "pulsante": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

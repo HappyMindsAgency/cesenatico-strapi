@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_struttura",
+  "info": {
+    "singularName": "categoria-struttura",
+    "pluralName": "categorie-struttura",
+    "displayName": "Categoria Struttura"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::struttura.struttura",
+      "mappedBy": "categoria_struttura"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offerte",
+  "info": {
+    "singularName": "offerta",
+    "pluralName": "offerte",
+    "displayName": "Offerta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "categoria_cosafare": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-cosa-fare.categoria-cosa-fare",
+      "mappedBy": "offerta"
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::struttura.struttura",
+      "inversedBy": "offerta"
+    },
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
+    "cover": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descrizione": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "disponibileInizio": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "disponibileFine": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "prezzo": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "categoria_offerta": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-offerta.categoria-offerta",
+      "mappedBy": "offerta"
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
+    },
+    "attiva": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    }
+  }
+}

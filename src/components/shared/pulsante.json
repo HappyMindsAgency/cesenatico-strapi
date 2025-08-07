@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_pulsantes",
+  "info": {
+    "displayName": "Pulsante",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "etichetta": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "default": "https://"
+    },
+    "destinazioneLink": {
+      "type": "boolean",
+      "default": true
+    },
+    "titleParam": {
+      "type": "string"
+    }
+  }
+}

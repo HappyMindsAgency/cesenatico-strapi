@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_cta_magentas",
+  "info": {
+    "displayName": "CtaBackground",
+    "icon": "heart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "colonna": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-progetto"
+    }
+  }
+}

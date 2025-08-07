@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_call_to_actions",
+  "info": {
+    "displayName": "CallToAction",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "sottotitolo": {
+      "type": "string"
+    },
+    "pulsante": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "descrizione": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_servizis",
+  "info": {
+    "displayName": "filtriServizi",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "categoriaServizi": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "appartamenti",
+        "balneari",
+        "commercioArtigianato",
+        "guideOperatoriWellness",
+        "ricettivo",
+        "ristorazione"
+      ]
+    },
+    "filtriAppartamenti": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "appartamenti"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-appartamenti",
+      "repeatable": false
+    },
+    "filtriBalneari": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "balneari"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-balneari",
+      "repeatable": false
+    },
+    "filtriCommercioArtigianato": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "commercioArtigianato"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-commercio-artigianato",
+      "repeatable": false
+    },
+    "filtriGuideOperatoriWellness": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "guideOperatoriWellness"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-guide-operatori-wellness",
+      "repeatable": false
+    },
+    "filtriRicettivo": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "ricettivo"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-ricettivo",
+      "repeatable": false
+    },
+    "filtriRistorazione": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "ristorazione"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-ristorazione",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

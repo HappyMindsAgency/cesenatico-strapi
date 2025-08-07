@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_formats",
+  "info": {
+    "displayName": "Format",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "descrizione": {
+      "type": "richtext"
+    },
+    "progetti": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-progetto"
+    },
+    "ctaFormat": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

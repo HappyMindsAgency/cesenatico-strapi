@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_form_landings",
+  "info": {
+    "displayName": "FormLanding",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "descrizione": {
+      "type": "richtext"
+    },
+    "idForm": {
+      "type": "string"
+    }
+  }
+}
