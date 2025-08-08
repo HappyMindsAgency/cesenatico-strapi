@@ -258,12 +258,13 @@ export interface ServiziAppartamentiMain extends Struct.ComponentSchema {
     cucinaAttrezzata: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     equipSpiaggia: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    kitPrimoSoccorso: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     lavastoviglie: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     lavatrice: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     microonde: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    primoSoccorso: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziPulizie: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;

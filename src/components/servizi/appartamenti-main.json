@@ -61,7 +61,7 @@
       "type": "boolean",
       "default": false
     },
-    "primoSoccorso": {
+    "kitPrimoSoccorso": {
       "type": "boolean",
       "default": false
     },
