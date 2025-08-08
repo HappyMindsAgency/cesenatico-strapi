@@ -1641,7 +1641,7 @@ export interface ApiServizioServizio extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }> &
-      Schema.Attribute.DefaultTo<'bi bi-rocket-takeoff'>;
+      Schema.Attribute.DefaultTo<'<i class="bi bi-rocket-takeoff"></i>'>;
     idNome: Schema.Attribute.UID &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

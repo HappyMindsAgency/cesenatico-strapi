@@ -40,7 +40,7 @@
           "localized": false
         }
       },
-      "default": "bi bi-rocket-takeoff",
+      "default": "<i class=\"bi bi-rocket-takeoff\"></i>",
       "required": true
     }
   }
