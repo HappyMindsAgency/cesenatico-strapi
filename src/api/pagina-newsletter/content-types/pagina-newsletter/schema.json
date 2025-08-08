@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_newsletter",
+  "info": {
+    "singularName": "pagina-newsletter",
+    "pluralName": "pagine-newsletter",
+    "displayName": "Pagina Newsletter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

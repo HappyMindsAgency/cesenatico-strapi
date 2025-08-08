@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_come_arrivare",
+  "info": {
+    "singularName": "pagina-come-arrivare",
+    "pluralName": "pagine-come-arrivare",
+    "displayName": "Pagina Come arrivare"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

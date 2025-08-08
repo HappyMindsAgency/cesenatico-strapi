@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_contatti",
+  "info": {
+    "singularName": "pagina-contatti",
+    "pluralName": "pagine-contatti",
+    "displayName": "Pagina Contatti"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

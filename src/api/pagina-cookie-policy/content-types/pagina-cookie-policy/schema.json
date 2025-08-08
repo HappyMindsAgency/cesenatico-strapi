@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_cookie_policy",
+  "info": {
+    "singularName": "pagina-cookie-policy",
+    "pluralName": "pagine-cookie-policy",
+    "displayName": "Pagina Cookie Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

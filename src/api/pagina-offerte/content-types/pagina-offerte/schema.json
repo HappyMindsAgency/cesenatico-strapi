@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_offerte",
+  "info": {
+    "singularName": "pagina-offerte",
+    "pluralName": "pagine-offerte",
+    "displayName": "Pagina Offerte"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

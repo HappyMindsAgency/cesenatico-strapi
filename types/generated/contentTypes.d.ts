@@ -1528,6 +1528,767 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPaginaAutunnoPaginaAutunno extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_autunno';
+  info: {
+    displayName: 'Pagina Autunno';
+    pluralName: 'pagine-autunno';
+    singularName: 'pagina-autunno';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-autunno.pagina-autunno'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaComeArrivarePaginaComeArrivare
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_come_arrivare';
+  info: {
+    displayName: 'Pagina Come arrivare';
+    pluralName: 'pagine-come-arrivare';
+    singularName: 'pagina-come-arrivare';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-come-arrivare.pagina-come-arrivare'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaContattiPaginaContatti
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_contatti';
+  info: {
+    displayName: 'Pagina Contatti';
+    pluralName: 'pagine-contatti';
+    singularName: 'pagina-contatti';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-contatti.pagina-contatti'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaCookiePolicyPaginaCookiePolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_cookie_policy';
+  info: {
+    displayName: 'Pagina Cookie Policy';
+    pluralName: 'pagine-cookie-policy';
+    singularName: 'pagina-cookie-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-cookie-policy.pagina-cookie-policy'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaCosaFarePaginaCosaFare
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_cosa_fare';
+  info: {
+    displayName: 'Pagina Cosa fare';
+    pluralName: 'pagine-cosa-fare';
+    singularName: 'pagina-cosa-fare';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-cosa-fare.pagina-cosa-fare'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaDoveDormirePaginaDoveDormire
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_dove_dormire';
+  info: {
+    displayName: 'Pagina Dove dormire';
+    pluralName: 'pagine-dove-dormire';
+    singularName: 'pagina-dove-dormire';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-dove-dormire.pagina-dove-dormire'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaDoveMangiarePaginaDoveMangiare
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_dove_mangiare';
+  info: {
+    displayName: 'Pagina Dove mangiare';
+    pluralName: 'pagine-dove-mangiare';
+    singularName: 'pagina-dove-mangiare';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-dove-mangiare.pagina-dove-mangiare'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaEsploraIlBorgoPaginaEsploraIlBorgo
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_esplora_il_borgo';
+  info: {
+    displayName: 'Pagina Esplora il borgo';
+    pluralName: 'pagine-esplora-il-borgo';
+    singularName: 'pagina-esplora-il-borgo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-esplora-il-borgo.pagina-esplora-il-borgo'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaEstatePaginaEstate extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_estate';
+  info: {
+    displayName: 'Pagina Estate';
+    pluralName: 'pagine-estate';
+    singularName: 'pagina-estate';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-estate.pagina-estate'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaEventiPaginaEventi extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_eventi';
+  info: {
+    displayName: 'Pagina Eventi';
+    pluralName: 'pagine-eventi';
+    singularName: 'pagina-eventi';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-eventi.pagina-eventi'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaExperiencePaginaExperience
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_experience';
+  info: {
+    displayName: 'Pagina Experience';
+    pluralName: 'pagine-experience';
+    singularName: 'pagina-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-experience.pagina-experience'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaHomePaginaHome extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_home';
+  info: {
+    displayName: 'Pagina Home';
+    pluralName: 'pagine-home';
+    singularName: 'pagina-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-home.pagina-home'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaInfoEServiziTuristiciPaginaInfoEServiziTuristici
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_info_e_servizi_turistici';
+  info: {
+    displayName: 'Pagina Info e servizi turistici';
+    pluralName: 'pagine-info-e-servizi-turistici';
+    singularName: 'pagina-info-e-servizi-turistici';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-info-e-servizi-turistici.pagina-info-e-servizi-turistici'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaInvernoPaginaInverno extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_inverno';
+  info: {
+    displayName: 'Pagina Inverno';
+    pluralName: 'pagine-inverno';
+    singularName: 'pagina-inverno';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-inverno.pagina-inverno'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaMappeEBrochurePaginaMappeEBrochure
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_mappe_e_brochure';
+  info: {
+    displayName: 'Pagina Mappe e brochure';
+    pluralName: 'pagine-mappe-e-brochure';
+    singularName: 'pagina-mappe-e-brochure';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-mappe-e-brochure.pagina-mappe-e-brochure'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaNewsletterPaginaNewsletter
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_newsletter';
+  info: {
+    displayName: 'Pagina Newsletter';
+    pluralName: 'pagine-newsletter';
+    singularName: 'pagina-newsletter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-newsletter.pagina-newsletter'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaOffertePaginaOfferte extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_offerte';
+  info: {
+    displayName: 'Pagina Offerte';
+    pluralName: 'pagine-offerte';
+    singularName: 'pagina-offerte';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-offerte.pagina-offerte'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaPianificaIlTuoViaggioPaginaPianificaIlTuoViaggio
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_pianifica_il_tuo_viaggio';
+  info: {
+    displayName: 'Pagina Pianifica il tuo viaggio';
+    pluralName: 'pagine-pianifica-il-tuo-viaggio';
+    singularName: 'pagina-pianifica-il-tuo-viaggio';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-pianifica-il-tuo-viaggio.pagina-pianifica-il-tuo-viaggio'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaPremiumPaginaPremium extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_premium';
+  info: {
+    displayName: 'Pagina Premium';
+    pluralName: 'pagine-premium';
+    singularName: 'pagina-premium';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-premium.pagina-premium'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaPrimaveraPaginaPrimavera
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_primavera';
+  info: {
+    displayName: 'Pagina Primavera';
+    pluralName: 'pagine-primavera';
+    singularName: 'pagina-primavera';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-primavera.pagina-primavera'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaPrivacyPolicyPaginaPrivacyPolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_privacy_policy';
+  info: {
+    displayName: 'Pagina Privacy Policy';
+    pluralName: 'pagine-privacy-policy';
+    singularName: 'pagina-privacy-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-privacy-policy.pagina-privacy-policy'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaStagioniPaginaStagioni
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_stagioni';
+  info: {
+    displayName: 'Pagina Stagioni ';
+    pluralName: 'pagine-stagioni';
+    singularName: 'pagina-stagioni';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-stagioni.pagina-stagioni'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaVacanzeAccessibiliPaginaVacanzeAccessibili
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_vacanze_accessibili';
+  info: {
+    displayName: 'Pagina Vacanze accessibili';
+    pluralName: 'pagine-vacanze-accessibili';
+    singularName: 'pagina-vacanze-accessibili';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-vacanze-accessibili.pagina-vacanze-accessibili'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaginaViviCesenaticoPaginaViviCesenatico
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagine_vivi_cesenatico';
+  info: {
+    displayName: 'Pagina Vivi Cesenatico';
+    pluralName: 'pagine-vivi-cesenatico';
+    singularName: 'pagina-vivi-cesenatico';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-vivi-cesenatico.pagina-vivi-cesenatico'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPoiPoi extends Struct.CollectionTypeSchema {
   collectionName: 'pois';
   info: {
@@ -2460,6 +3221,30 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::offerta.offerta': ApiOffertaOfferta;
       'api::operatore.operatore': ApiOperatoreOperatore;
+      'api::pagina-autunno.pagina-autunno': ApiPaginaAutunnoPaginaAutunno;
+      'api::pagina-come-arrivare.pagina-come-arrivare': ApiPaginaComeArrivarePaginaComeArrivare;
+      'api::pagina-contatti.pagina-contatti': ApiPaginaContattiPaginaContatti;
+      'api::pagina-cookie-policy.pagina-cookie-policy': ApiPaginaCookiePolicyPaginaCookiePolicy;
+      'api::pagina-cosa-fare.pagina-cosa-fare': ApiPaginaCosaFarePaginaCosaFare;
+      'api::pagina-dove-dormire.pagina-dove-dormire': ApiPaginaDoveDormirePaginaDoveDormire;
+      'api::pagina-dove-mangiare.pagina-dove-mangiare': ApiPaginaDoveMangiarePaginaDoveMangiare;
+      'api::pagina-esplora-il-borgo.pagina-esplora-il-borgo': ApiPaginaEsploraIlBorgoPaginaEsploraIlBorgo;
+      'api::pagina-estate.pagina-estate': ApiPaginaEstatePaginaEstate;
+      'api::pagina-eventi.pagina-eventi': ApiPaginaEventiPaginaEventi;
+      'api::pagina-experience.pagina-experience': ApiPaginaExperiencePaginaExperience;
+      'api::pagina-home.pagina-home': ApiPaginaHomePaginaHome;
+      'api::pagina-info-e-servizi-turistici.pagina-info-e-servizi-turistici': ApiPaginaInfoEServiziTuristiciPaginaInfoEServiziTuristici;
+      'api::pagina-inverno.pagina-inverno': ApiPaginaInvernoPaginaInverno;
+      'api::pagina-mappe-e-brochure.pagina-mappe-e-brochure': ApiPaginaMappeEBrochurePaginaMappeEBrochure;
+      'api::pagina-newsletter.pagina-newsletter': ApiPaginaNewsletterPaginaNewsletter;
+      'api::pagina-offerte.pagina-offerte': ApiPaginaOffertePaginaOfferte;
+      'api::pagina-pianifica-il-tuo-viaggio.pagina-pianifica-il-tuo-viaggio': ApiPaginaPianificaIlTuoViaggioPaginaPianificaIlTuoViaggio;
+      'api::pagina-premium.pagina-premium': ApiPaginaPremiumPaginaPremium;
+      'api::pagina-primavera.pagina-primavera': ApiPaginaPrimaveraPaginaPrimavera;
+      'api::pagina-privacy-policy.pagina-privacy-policy': ApiPaginaPrivacyPolicyPaginaPrivacyPolicy;
+      'api::pagina-stagioni.pagina-stagioni': ApiPaginaStagioniPaginaStagioni;
+      'api::pagina-vacanze-accessibili.pagina-vacanze-accessibili': ApiPaginaVacanzeAccessibiliPaginaVacanzeAccessibili;
+      'api::pagina-vivi-cesenatico.pagina-vivi-cesenatico': ApiPaginaViviCesenaticoPaginaViviCesenatico;
       'api::poi.poi': ApiPoiPoi;
       'api::servizio.servizio': ApiServizioServizio;
       'api::stagionalita.stagionalita': ApiStagionalitaStagionalita;

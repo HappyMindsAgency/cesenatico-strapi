@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_inverno",
+  "info": {
+    "singularName": "pagina-inverno",
+    "pluralName": "pagine-inverno",
+    "displayName": "Pagina Inverno"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

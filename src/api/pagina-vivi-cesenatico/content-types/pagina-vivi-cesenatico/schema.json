@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_vivi_cesenatico",
+  "info": {
+    "singularName": "pagina-vivi-cesenatico",
+    "pluralName": "pagine-vivi-cesenatico",
+    "displayName": "Pagina Vivi Cesenatico"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

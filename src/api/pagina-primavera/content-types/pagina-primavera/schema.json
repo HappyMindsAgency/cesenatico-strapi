@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_primavera",
+  "info": {
+    "singularName": "pagina-primavera",
+    "pluralName": "pagine-primavera",
+    "displayName": "Pagina Primavera"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_privacy_policy",
+  "info": {
+    "singularName": "pagina-privacy-policy",
+    "pluralName": "pagine-privacy-policy",
+    "displayName": "Pagina Privacy Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "pagine_stagioni",
+  "info": {
+    "singularName": "pagina-stagioni",
+    "pluralName": "pagine-stagioni",
+    "displayName": "Pagina Stagioni "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {}
+}
