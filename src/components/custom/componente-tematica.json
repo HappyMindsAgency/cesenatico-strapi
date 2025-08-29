@@ -1,14 +1,11 @@
 {
-  "collectionName": "components_shared_intros",
+  "collectionName": "components_custom_componente_tematicas",
   "info": {
-    "displayName": "intro",
-    "icon": "pin"
+    "displayName": "ComponenteTematica",
+    "icon": "apps"
   },
   "options": {},
   "attributes": {
-    "occhiello": {
-      "type": "string"
-    },
     "titolo": {
       "type": "string"
     },
@@ -21,6 +18,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "pulsante": {
+      "type": "component",
+      "component": "shared.pulsante",
+      "repeatable": false
     }
   },
   "config": {}

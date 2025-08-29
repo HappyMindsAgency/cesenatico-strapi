@@ -1,5 +1,60 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CustomComponenteTematica extends Struct.ComponentSchema {
+  collectionName: 'components_custom_componente_tematicas';
+  info: {
+    displayName: 'ComponenteTematica';
+    icon: 'apps';
+  };
+  attributes: {
+    immagine: Schema.Attribute.Media<'images'>;
+    pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
+    testo: Schema.Attribute.RichText;
+    titolo: Schema.Attribute.String;
+  };
+}
+
+export interface CustomLinkCorrelato extends Struct.ComponentSchema {
+  collectionName: 'components_custom_link_correlatoes';
+  info: {
+    displayName: 'LinkCorrelato';
+    icon: 'manyToMany';
+  };
+  attributes: {
+    immagine: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    titolo: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CustomMappa extends Struct.ComponentSchema {
+  collectionName: 'components_custom_mappas';
+  info: {
+    displayName: 'Mappa';
+    icon: 'pinMap';
+  };
+  attributes: {
+    altezza: Schema.Attribute.String & Schema.Attribute.DefaultTo<'400px'>;
+    latitudine: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    longitudine: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    zoom: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<12>;
+  };
+}
+
+export interface CustomMezzoTrasporto extends Struct.ComponentSchema {
+  collectionName: 'components_custom_mezzo_trasportos';
+  info: {
+    displayName: 'MezzoTrasporto';
+    icon: 'walk';
+  };
+  attributes: {
+    fullColumn: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    icona: Schema.Attribute.String;
+    testo: Schema.Attribute.RichText;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface FiltriServiziFiltriAppartamenti
   extends Struct.ComponentSchema {
   collectionName: 'components_filtri_servizi_filtri_appartamentis';
@@ -794,6 +849,7 @@ export interface SharedIntro extends Struct.ComponentSchema {
     immagine: Schema.Attribute.Media<'images'>;
     occhiello: Schema.Attribute.String;
     testo: Schema.Attribute.RichText;
+    titolo: Schema.Attribute.String;
   };
 }
 
@@ -1020,6 +1076,10 @@ export interface SharedVideoHeader extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'custom.componente-tematica': CustomComponenteTematica;
+      'custom.link-correlato': CustomLinkCorrelato;
+      'custom.mappa': CustomMappa;
+      'custom.mezzo-trasporto': CustomMezzoTrasporto;
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;
       'filtri-servizi.filtri-balneari': FiltriServiziFiltriBalneari;
       'filtri-servizi.filtri-commercio-artigianato': FiltriServiziFiltriCommercioArtigianato;

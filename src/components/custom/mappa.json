@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_custom_mappas",
+  "info": {
+    "displayName": "Mappa",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "latitudine": {
+      "type": "decimal",
+      "required": true
+    },
+    "longitudine": {
+      "type": "decimal",
+      "required": true
+    },
+    "zoom": {
+      "type": "integer",
+      "default": 12
+    },
+    "altezza": {
+      "type": "string",
+      "default": "400px"
+    }
+  },
+  "config": {}
+}

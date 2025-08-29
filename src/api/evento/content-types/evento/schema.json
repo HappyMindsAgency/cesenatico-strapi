@@ -134,6 +134,11 @@
       "relation": "oneToMany",
       "target": "api::categoria-evento.categoria-evento"
     },
+    "stagionalitas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::stagionalita.stagionalita"
+    },
     "prenotazione": {
       "type": "boolean",
       "pluginOptions": {

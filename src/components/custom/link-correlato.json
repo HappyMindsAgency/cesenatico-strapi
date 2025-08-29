@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_custom_link_correlatoes",
+  "info": {
+    "displayName": "LinkCorrelato",
+    "icon": "manyToMany"
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
