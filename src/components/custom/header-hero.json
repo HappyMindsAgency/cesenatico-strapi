@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_custom_header_heroes",
+  "info": {
+    "displayName": "headerHero",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "etichetta": {
+      "type": "string",
+      "required": true
+    },
+    "pulsante": {
+      "type": "component",
+      "component": "shared.pulsante",
+      "repeatable": false
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    }
+  },
+  "config": {}
+}

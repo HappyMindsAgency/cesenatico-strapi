@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_custom_sezione_tematicas",
+  "info": {
+    "displayName": "sezioneTematica",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "occhiello": {
+      "type": "string"
+    },
+    "titolo": {
+      "type": "string",
+      "required": true
+    },
+    "categoria_cosa_fare": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria-cosa-fare.categoria-cosa-fare"
+    }
+  },
+  "config": {}
+}

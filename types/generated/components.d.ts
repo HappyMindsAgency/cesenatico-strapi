@@ -14,6 +14,21 @@ export interface CustomComponenteTematica extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomHeaderHero extends Struct.ComponentSchema {
+  collectionName: 'components_custom_header_heroes';
+  info: {
+    displayName: 'headerHero';
+    icon: 'expand';
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
+    etichetta: Schema.Attribute.String & Schema.Attribute.Required;
+    pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
+    titolo: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface CustomLinkCorrelato extends Struct.ComponentSchema {
   collectionName: 'components_custom_link_correlatoes';
   info: {
@@ -22,6 +37,7 @@ export interface CustomLinkCorrelato extends Struct.ComponentSchema {
   };
   attributes: {
     immagine: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    testo: Schema.Attribute.RichText;
     titolo: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -52,6 +68,22 @@ export interface CustomMezzoTrasporto extends Struct.ComponentSchema {
     icona: Schema.Attribute.String;
     testo: Schema.Attribute.RichText;
     titolo: Schema.Attribute.String;
+  };
+}
+
+export interface CustomSezioneTematica extends Struct.ComponentSchema {
+  collectionName: 'components_custom_sezione_tematicas';
+  info: {
+    displayName: 'sezioneTematica';
+    icon: 'alien';
+  };
+  attributes: {
+    categoria_cosa_fare: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::categoria-cosa-fare.categoria-cosa-fare'
+    >;
+    occhiello: Schema.Attribute.String;
+    titolo: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1077,9 +1109,11 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'custom.componente-tematica': CustomComponenteTematica;
+      'custom.header-hero': CustomHeaderHero;
       'custom.link-correlato': CustomLinkCorrelato;
       'custom.mappa': CustomMappa;
       'custom.mezzo-trasporto': CustomMezzoTrasporto;
+      'custom.sezione-tematica': CustomSezioneTematica;
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;
       'filtri-servizi.filtri-balneari': FiltriServiziFiltriBalneari;
       'filtri-servizi.filtri-commercio-artigianato': FiltriServiziFiltriCommercioArtigianato;

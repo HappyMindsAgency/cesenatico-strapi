@@ -10,6 +10,9 @@
       "type": "string",
       "required": true
     },
+    "testo": {
+      "type": "richtext"
+    },
     "immagine": {
       "type": "media",
       "multiple": false,
