@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_custom_cta_premiums",
+  "info": {
+    "displayName": "ctaPremium"
+  },
+  "options": {},
+  "attributes": {
+    "nomeCTA": {
+      "type": "string"
+    },
+    "callToAction": {
+      "type": "component",
+      "component": "shared.call-to-action",
+      "repeatable": false
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

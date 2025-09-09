@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_box_correlatoes",
+  "info": {
+    "displayName": "BoxCorrelato",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "testo": {
+      "type": "richtext"
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "larghezzaIntera": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

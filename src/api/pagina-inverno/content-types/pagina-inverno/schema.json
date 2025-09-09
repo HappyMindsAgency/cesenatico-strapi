@@ -4,7 +4,7 @@
   "info": {
     "singularName": "pagina-inverno",
     "pluralName": "pagine-inverno",
-    "displayName": "Pagina Inverno"
+    "displayName": "06.04. Pagina Inverno"
   },
   "options": {
     "draftAndPublish": true
@@ -44,29 +44,15 @@
         "images"
       ]
     },
-    "introOcchiello": {
-      "type": "string",
+    "intro": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "introTitolo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "introTesto": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      },
+      "component": "shared.intro",
+      "repeatable": false
     },
     "linkCorrelati": {
       "type": "component",

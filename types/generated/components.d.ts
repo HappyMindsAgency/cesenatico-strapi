@@ -14,6 +14,19 @@ export interface CustomComponenteTematica extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomCtaPremium extends Struct.ComponentSchema {
+  collectionName: 'components_custom_cta_premiums';
+  info: {
+    displayName: 'ctaPremium';
+  };
+  attributes: {
+    background: Schema.Attribute.Media<'images'>;
+    callToAction: Schema.Attribute.Component<'shared.call-to-action', false>;
+    immagine: Schema.Attribute.Media<'images'>;
+    nomeCTA: Schema.Attribute.String;
+  };
+}
+
 export interface CustomHeaderHero extends Struct.ComponentSchema {
   collectionName: 'components_custom_header_heroes';
   info: {
@@ -84,6 +97,17 @@ export interface CustomSezioneTematica extends Struct.ComponentSchema {
     >;
     occhiello: Schema.Attribute.String;
     titolo: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CustomTabSezioni extends Struct.ComponentSchema {
+  collectionName: 'components_custom_tab_sezionis';
+  info: {
+    displayName: 'tabSezioni';
+  };
+  attributes: {
+    boxContenuto: Schema.Attribute.Component<'shared.box-correlato', true>;
+    etichetta: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -714,6 +738,22 @@ export interface ServiziRistorazioneMain extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBoxCorrelato extends Struct.ComponentSchema {
+  collectionName: 'components_shared_box_correlatoes';
+  info: {
+    displayName: 'BoxCorrelato';
+    icon: 'apps';
+  };
+  attributes: {
+    immagine: Schema.Attribute.Media<'images'>;
+    larghezzaIntera: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    testo: Schema.Attribute.RichText;
+    titolo: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallToAction extends Struct.ComponentSchema {
   collectionName: 'components_shared_call_to_actions';
   info: {
@@ -1109,11 +1149,13 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'custom.componente-tematica': CustomComponenteTematica;
+      'custom.cta-premium': CustomCtaPremium;
       'custom.header-hero': CustomHeaderHero;
       'custom.link-correlato': CustomLinkCorrelato;
       'custom.mappa': CustomMappa;
       'custom.mezzo-trasporto': CustomMezzoTrasporto;
       'custom.sezione-tematica': CustomSezioneTematica;
+      'custom.tab-sezioni': CustomTabSezioni;
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;
       'filtri-servizi.filtri-balneari': FiltriServiziFiltriBalneari;
       'filtri-servizi.filtri-commercio-artigianato': FiltriServiziFiltriCommercioArtigianato;
@@ -1142,6 +1184,7 @@ declare module '@strapi/strapi' {
       'servizi.ricettivo-wellbeing': ServiziRicettivoWellbeing;
       'servizi.ristorazione-enogastronomia': ServiziRistorazioneEnogastronomia;
       'servizi.ristorazione-main': ServiziRistorazioneMain;
+      'shared.box-correlato': SharedBoxCorrelato;
       'shared.call-to-action': SharedCallToAction;
       'shared.card-progetto': SharedCardProgetto;
       'shared.codice': SharedCodice;

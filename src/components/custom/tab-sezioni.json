@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_tab_sezionis",
+  "info": {
+    "displayName": "tabSezioni"
+  },
+  "options": {},
+  "attributes": {
+    "etichetta": {
+      "type": "string",
+      "required": true
+    },
+    "boxContenuto": {
+      "type": "component",
+      "component": "shared.box-correlato",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

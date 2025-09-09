@@ -96,15 +96,14 @@
       "target": "api::categoria-offerta.categoria-offerta",
       "mappedBy": "offerta"
     },
-    "seo": {
-      "type": "component",
+    "premium": {
+      "type": "boolean",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "component": "seo-component.seo",
-      "repeatable": false
+      "default": false
     },
     "attiva": {
       "type": "boolean",
@@ -114,6 +113,16 @@
         }
       },
       "default": false
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
     }
   }
 }

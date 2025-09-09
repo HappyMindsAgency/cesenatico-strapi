@@ -1213,6 +1213,13 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    premium: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     prenotazione: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1397,6 +1404,13 @@ export interface ApiOffertaOfferta extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::offerta.offerta'
     >;
+    premium: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     prezzo: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1535,7 +1549,7 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
 export interface ApiPaginaAutunnoPaginaAutunno extends Struct.SingleTypeSchema {
   collectionName: 'pagine_autunno';
   info: {
-    displayName: 'Pagina Autunno';
+    displayName: '06.03. Pagina Autunno';
     pluralName: 'pagine-autunno';
     singularName: 'pagina-autunno';
   };
@@ -1563,19 +1577,7 @@ export interface ApiPaginaAutunnoPaginaAutunno extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    introOcchiello: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTesto: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTitolo: Schema.Attribute.String &
+    intro: Schema.Attribute.Component<'shared.intro', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1622,11 +1624,74 @@ export interface ApiPaginaAutunnoPaginaAutunno extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPaginaCesenaticoPlusPaginaCesenaticoPlus
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pagina_cesenatico_pluses';
+  info: {
+    displayName: '04.05. Pagina Cesenatico Plus';
+    pluralName: 'pagina-cesenatico-pluses';
+    singularName: 'pagina-cesenatico-plus';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pagina-cesenatico-plus.pagina-cesenatico-plus'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPaginaComeArrivarePaginaComeArrivare
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_come_arrivare';
   info: {
-    displayName: 'Pagina Come arrivare';
+    displayName: '05.01. Pagina Come arrivare';
     pluralName: 'pagine-come-arrivare';
     singularName: 'pagina-come-arrivare';
   };
@@ -1737,7 +1802,7 @@ export interface ApiPaginaContattiPaginaContatti
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_contatti';
   info: {
-    displayName: 'Pagina Contatti';
+    displayName: '05.07. Pagina Contatti';
     pluralName: 'pagine-contatti';
     singularName: 'pagina-contatti';
   };
@@ -1750,15 +1815,52 @@ export interface ApiPaginaContattiPaginaContatti
     };
   };
   attributes: {
+    contenuto: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pagina-contatti.pagina-contatti'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1769,7 +1871,7 @@ export interface ApiPaginaCookiePolicyPaginaCookiePolicy
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_cookie_policy';
   info: {
-    displayName: 'Pagina Cookie Policy';
+    displayName: '07.02. Pagina Cookie Policy';
     pluralName: 'pagine-cookie-policy';
     singularName: 'pagina-cookie-policy';
   };
@@ -1820,7 +1922,7 @@ export interface ApiPaginaCosaFarePaginaCosaFare
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_cosa_fare';
   info: {
-    displayName: 'Pagina Cosa fare';
+    displayName: '03. Pagina Cosa fare';
     pluralName: 'pagine-cosa-fare';
     singularName: 'pagina-cosa-fare';
   };
@@ -1889,7 +1991,7 @@ export interface ApiPaginaDoveDormirePaginaDoveDormire
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_dove_dormire';
   info: {
-    displayName: 'Pagina Dove dormire';
+    displayName: '05.02. Pagina Dove dormire';
     pluralName: 'pagine-dove-dormire';
     singularName: 'pagina-dove-dormire';
   };
@@ -1958,7 +2060,7 @@ export interface ApiPaginaDoveMangiarePaginaDoveMangiare
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_dove_mangiare';
   info: {
-    displayName: 'Pagina Dove mangiare';
+    displayName: '05.03. Pagina Dove mangiare';
     pluralName: 'pagine-dove-mangiare';
     singularName: 'pagina-dove-mangiare';
   };
@@ -2027,7 +2129,7 @@ export interface ApiPaginaEsploraIlBorgoPaginaEsploraIlBorgo
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_esplora_il_borgo';
   info: {
-    displayName: 'Pagina Esplora il borgo';
+    displayName: '02. Pagina Esplora il borgo';
     pluralName: 'pagine-esplora-il-borgo';
     singularName: 'pagina-esplora-il-borgo';
   };
@@ -2098,7 +2200,7 @@ export interface ApiPaginaEsploraIlBorgoPaginaEsploraIlBorgo
 export interface ApiPaginaEstatePaginaEstate extends Struct.SingleTypeSchema {
   collectionName: 'pagine_estate';
   info: {
-    displayName: 'Pagina Estate';
+    displayName: '06.02. Pagina Estate';
     pluralName: 'pagine-estate';
     singularName: 'pagina-estate';
   };
@@ -2126,19 +2228,7 @@ export interface ApiPaginaEstatePaginaEstate extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    introOcchiello: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTesto: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTitolo: Schema.Attribute.String &
+    intro: Schema.Attribute.Component<'shared.intro', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2188,7 +2278,7 @@ export interface ApiPaginaEstatePaginaEstate extends Struct.SingleTypeSchema {
 export interface ApiPaginaEventiPaginaEventi extends Struct.SingleTypeSchema {
   collectionName: 'pagine_eventi';
   info: {
-    displayName: 'Pagina Eventi';
+    displayName: '04.03. Pagina Eventi';
     pluralName: 'pagine-eventi';
     singularName: 'pagina-eventi';
   };
@@ -2269,7 +2359,7 @@ export interface ApiPaginaExperiencePaginaExperience
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_experience';
   info: {
-    displayName: 'Pagina Experience';
+    displayName: '04.01. Pagina Experience';
     pluralName: 'pagine-experience';
     singularName: 'pagina-experience';
   };
@@ -2337,7 +2427,7 @@ export interface ApiPaginaExperiencePaginaExperience
 export interface ApiPaginaHomePaginaHome extends Struct.SingleTypeSchema {
   collectionName: 'pagine_home';
   info: {
-    displayName: 'Pagina Home';
+    displayName: '01. Pagina Home';
     pluralName: 'pagine-home';
     singularName: 'pagina-home';
   };
@@ -2435,7 +2525,7 @@ export interface ApiPaginaInfoEServiziTuristiciPaginaInfoEServiziTuristici
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_info_e_servizi_turistici';
   info: {
-    displayName: 'Pagina Info e servizi turistici';
+    displayName: '05.04. Pagina Info e servizi turistici';
     pluralName: 'pagine-info-e-servizi-turistici';
     singularName: 'pagina-info-e-servizi-turistici';
   };
@@ -2503,7 +2593,7 @@ export interface ApiPaginaInfoEServiziTuristiciPaginaInfoEServiziTuristici
 export interface ApiPaginaInvernoPaginaInverno extends Struct.SingleTypeSchema {
   collectionName: 'pagine_inverno';
   info: {
-    displayName: 'Pagina Inverno';
+    displayName: '06.04. Pagina Inverno';
     pluralName: 'pagine-inverno';
     singularName: 'pagina-inverno';
   };
@@ -2531,19 +2621,7 @@ export interface ApiPaginaInvernoPaginaInverno extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    introOcchiello: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTesto: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTitolo: Schema.Attribute.String &
+    intro: Schema.Attribute.Component<'shared.intro', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2594,7 +2672,7 @@ export interface ApiPaginaMappeEBrochurePaginaMappeEBrochure
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_mappe_e_brochure';
   info: {
-    displayName: 'Pagina Mappe e brochure';
+    displayName: '05.06. Pagina Mappe e brochure';
     pluralName: 'pagine-mappe-e-brochure';
     singularName: 'pagina-mappe-e-brochure';
   };
@@ -2663,7 +2741,7 @@ export interface ApiPaginaNewsletterPaginaNewsletter
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_newsletter';
   info: {
-    displayName: 'Pagina Newsletter';
+    displayName: '07.03. Pagina Newsletter';
     pluralName: 'pagine-newsletter';
     singularName: 'pagina-newsletter';
   };
@@ -2731,7 +2809,7 @@ export interface ApiPaginaNewsletterPaginaNewsletter
 export interface ApiPaginaOffertePaginaOfferte extends Struct.SingleTypeSchema {
   collectionName: 'pagine_offerte';
   info: {
-    displayName: 'Pagina Offerte';
+    displayName: '04.02. Pagina Offerte';
     pluralName: 'pagine-offerte';
     singularName: 'pagina-offerte';
   };
@@ -2800,7 +2878,7 @@ export interface ApiPaginaPianificaIlTuoViaggioPaginaPianificaIlTuoViaggio
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_pianifica_il_tuo_viaggio';
   info: {
-    displayName: 'Pagina Pianifica il tuo viaggio';
+    displayName: '05. Pagina Pianifica il tuo viaggio';
     pluralName: 'pagine-pianifica-il-tuo-viaggio';
     singularName: 'pagina-pianifica-il-tuo-viaggio';
   };
@@ -2880,7 +2958,7 @@ export interface ApiPaginaPianificaIlTuoViaggioPaginaPianificaIlTuoViaggio
 export interface ApiPaginaPremiumPaginaPremium extends Struct.SingleTypeSchema {
   collectionName: 'pagine_premium';
   info: {
-    displayName: 'Pagina Premium';
+    displayName: '04.04. Pagina Premium';
     pluralName: 'pagine-premium';
     singularName: 'pagina-premium';
   };
@@ -2991,7 +3069,7 @@ export interface ApiPaginaPrimaveraPaginaPrimavera
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_primavera';
   info: {
-    displayName: 'Pagina Primavera';
+    displayName: '06.01. Pagina Primavera';
     pluralName: 'pagine-primavera';
     singularName: 'pagina-primavera';
   };
@@ -3019,19 +3097,7 @@ export interface ApiPaginaPrimaveraPaginaPrimavera
           localized: true;
         };
       }>;
-    introOcchiello: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTesto: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    introTitolo: Schema.Attribute.String &
+    intro: Schema.Attribute.Component<'shared.intro', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -3082,7 +3148,7 @@ export interface ApiPaginaPrivacyPolicyPaginaPrivacyPolicy
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_privacy_policy';
   info: {
-    displayName: 'Pagina Privacy Policy';
+    displayName: '07.01. Pagina Privacy Policy';
     pluralName: 'pagine-privacy-policy';
     singularName: 'pagina-privacy-policy';
   };
@@ -3129,43 +3195,11 @@ export interface ApiPaginaPrivacyPolicyPaginaPrivacyPolicy
   };
 }
 
-export interface ApiPaginaStagioniPaginaStagioni
-  extends Struct.SingleTypeSchema {
-  collectionName: 'pagine_stagioni';
-  info: {
-    displayName: 'Pagina Stagioni ';
-    pluralName: 'pagine-stagioni';
-    singularName: 'pagina-stagioni';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::pagina-stagioni.pagina-stagioni'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiPaginaVacanzeAccessibiliPaginaVacanzeAccessibili
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_vacanze_accessibili';
   info: {
-    displayName: 'Pagina Vacanze accessibili';
+    displayName: '05.05. Pagina Vacanze accessibili';
     pluralName: 'pagine-vacanze-accessibili';
     singularName: 'pagina-vacanze-accessibili';
   };
@@ -3178,15 +3212,82 @@ export interface ApiPaginaVacanzeAccessibiliPaginaVacanzeAccessibili
     };
   };
   attributes: {
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    esploraSottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    esploraTitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pagina-vacanze-accessibili.pagina-vacanze-accessibili'
     >;
+    pianificaSottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pianificaTitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tabEsplora: Schema.Attribute.Component<'custom.tab-sezioni', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tabPianifica: Schema.Attribute.Component<'custom.tab-sezioni', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3197,7 +3298,7 @@ export interface ApiPaginaViviCesenaticoPaginaViviCesenatico
   extends Struct.SingleTypeSchema {
   collectionName: 'pagine_vivi_cesenatico';
   info: {
-    displayName: 'Pagina Vivi Cesenatico';
+    displayName: '04. Pagina Vivi Cesenatico';
     pluralName: 'pagine-vivi-cesenatico';
     singularName: 'pagina-vivi-cesenatico';
   };
@@ -3210,15 +3311,88 @@ export interface ApiPaginaViviCesenaticoPaginaViviCesenatico
     };
   };
   attributes: {
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaPremium: Schema.Attribute.Component<'custom.cta-premium', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    eventiSottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    eventiTitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    experienceSottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    experienceTitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pagina-vivi-cesenatico.pagina-vivi-cesenatico'
     >;
+    offerteSottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    offerteTitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3536,6 +3710,13 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    premium: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo-component.seo', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -4158,6 +4339,7 @@ declare module '@strapi/strapi' {
       'api::offerta.offerta': ApiOffertaOfferta;
       'api::operatore.operatore': ApiOperatoreOperatore;
       'api::pagina-autunno.pagina-autunno': ApiPaginaAutunnoPaginaAutunno;
+      'api::pagina-cesenatico-plus.pagina-cesenatico-plus': ApiPaginaCesenaticoPlusPaginaCesenaticoPlus;
       'api::pagina-come-arrivare.pagina-come-arrivare': ApiPaginaComeArrivarePaginaComeArrivare;
       'api::pagina-contatti.pagina-contatti': ApiPaginaContattiPaginaContatti;
       'api::pagina-cookie-policy.pagina-cookie-policy': ApiPaginaCookiePolicyPaginaCookiePolicy;
@@ -4178,7 +4360,6 @@ declare module '@strapi/strapi' {
       'api::pagina-premium.pagina-premium': ApiPaginaPremiumPaginaPremium;
       'api::pagina-primavera.pagina-primavera': ApiPaginaPrimaveraPaginaPrimavera;
       'api::pagina-privacy-policy.pagina-privacy-policy': ApiPaginaPrivacyPolicyPaginaPrivacyPolicy;
-      'api::pagina-stagioni.pagina-stagioni': ApiPaginaStagioniPaginaStagioni;
       'api::pagina-vacanze-accessibili.pagina-vacanze-accessibili': ApiPaginaVacanzeAccessibiliPaginaVacanzeAccessibili;
       'api::pagina-vivi-cesenatico.pagina-vivi-cesenatico': ApiPaginaViviCesenaticoPaginaViviCesenatico;
       'api::poi.poi': ApiPoiPoi;

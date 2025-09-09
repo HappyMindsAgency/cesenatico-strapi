@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "pagine_primavera",
+  "collectionName": "pagina_cesenatico_pluses",
   "info": {
-    "singularName": "pagina-primavera",
-    "pluralName": "pagine-primavera",
-    "displayName": "06.01. Pagina Primavera"
+    "singularName": "pagina-cesenatico-plus",
+    "pluralName": "pagina-cesenatico-pluses",
+    "displayName": "04.05. Pagina Cesenatico Plus"
   },
   "options": {
     "draftAndPublish": true
@@ -53,29 +53,6 @@
       },
       "component": "shared.intro",
       "repeatable": false
-    },
-    "linkCorrelati": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "custom.link-correlato",
-      "repeatable": true
-    },
-    "eventiTitolo": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "stagionalita": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::stagionalita.stagionalita"
     },
     "seo": {
       "type": "component",
