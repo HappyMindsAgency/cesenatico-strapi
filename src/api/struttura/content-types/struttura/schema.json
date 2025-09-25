@@ -231,6 +231,12 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
+    },
+    "categoria_cosa_fare": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-cosa-fare.categoria-cosa-fare",
+      "inversedBy": "struttura"
     }
   }
 }

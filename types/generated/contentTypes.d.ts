@@ -524,6 +524,10 @@ export interface ApiCategoriaCosaFareCategoriaCosaFare
           localized: true;
         };
       }>;
+    struttura: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::struttura.struttura'
+    >;
     titolo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -3607,6 +3611,10 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
+    categoria_cosa_fare: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::categoria-cosa-fare.categoria-cosa-fare'
+    >;
     categoria_struttura: Schema.Attribute.Relation<
       'manyToOne',
       'api::categoria-struttura.categoria-struttura'
