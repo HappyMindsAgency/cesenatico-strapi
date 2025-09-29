@@ -237,6 +237,15 @@
       "relation": "manyToMany",
       "target": "api::categoria-cosa-fare.categoria-cosa-fare",
       "inversedBy": "struttura"
+    },
+    "telefono2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
     }
   }
 }
