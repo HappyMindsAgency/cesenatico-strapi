@@ -3758,6 +3758,13 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    telefono2: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     tipologia_struttura: Schema.Attribute.Relation<
       'manyToOne',
       'api::tipologia-struttura.tipologia-struttura'
