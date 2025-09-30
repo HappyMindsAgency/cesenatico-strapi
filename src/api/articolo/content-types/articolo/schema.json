@@ -59,6 +59,12 @@
       "target": "api::categoria-esplora.categoria-esplora",
       "inversedBy": "articolo"
     },
+    "categoria_cosa_fare": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-cosa-fare.categoria-cosa-fare",
+      "inversedBy": "articoli"
+    },
     "seo": {
       "type": "component",
       "pluginOptions": {
@@ -68,12 +74,6 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
-    },
-    "categoria_cosa_fare": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categoria-cosa-fare.categoria-cosa-fare",
-      "inversedBy": "articoli"
     }
   }
 }

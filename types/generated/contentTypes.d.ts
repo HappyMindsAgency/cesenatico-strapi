@@ -203,6 +203,63 @@ export interface AdminRole extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface AdminSession extends Struct.CollectionTypeSchema {
+  collectionName: 'strapi_sessions';
+  info: {
+    description: 'Session Manager storage';
+    displayName: 'Session';
+    name: 'Session';
+    pluralName: 'sessions';
+    singularName: 'session';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+    i18n: {
+      localized: false;
+    };
+  };
+  attributes: {
+    absoluteExpiresAt: Schema.Attribute.DateTime & Schema.Attribute.Private;
+    childId: Schema.Attribute.String & Schema.Attribute.Private;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deviceId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    expiresAt: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::session'> &
+      Schema.Attribute.Private;
+    origin: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sessionId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.Unique;
+    status: Schema.Attribute.String & Schema.Attribute.Private;
+    type: Schema.Attribute.String & Schema.Attribute.Private;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    userId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface AdminTransferToken extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_transfer_tokens';
   info: {
@@ -432,6 +489,72 @@ export interface ApiArticoloArticolo extends Struct.CollectionTypeSchema {
       }>;
     titolo: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCategoriaCosaFarePlusCategoriaCosaFarePlus
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'categoria_cosa_fare_pluses';
+  info: {
+    displayName: 'Categoria CosaFarePlus';
+    pluralName: 'categoria-cosa-fare-pluses';
+    singularName: 'categoria-cosa-fare-plus';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    categoria_esplora: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::categoria-esplora.categoria-esplora'
+    >;
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaPlus: Schema.Attribute.Component<'custom.cta-premium', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categoria-cosa-fare-plus.categoria-cosa-fare-plus'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    sottotitolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1123,6 +1246,12 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    contattoEmail: Schema.Attribute.Email &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1322,12 +1451,6 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::global.global'>;
-    Navigazione: Schema.Attribute.Component<'navigazione.menu-item', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text &
       Schema.Attribute.Required &
@@ -1659,6 +1782,12 @@ export interface ApiPaginaCesenaticoPlusPaginaCesenaticoPlus
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaPlus: Schema.Attribute.Component<'custom.cta-premium', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     intro: Schema.Attribute.Component<'shared.intro', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2491,6 +2620,12 @@ export interface ApiPaginaHomePaginaHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    intro: Schema.Attribute.Component<'shared.intro', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     introSottotitolo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2515,6 +2650,12 @@ export interface ApiPaginaHomePaginaHome extends Struct.SingleTypeSchema {
       'api::pagina-home.pagina-home'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     sezioniTematica: Schema.Attribute.Component<
       'custom.sezione-tematica',
       true
@@ -4341,10 +4482,12 @@ declare module '@strapi/strapi' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
+      'admin::session': AdminSession;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::articolo.articolo': ApiArticoloArticolo;
+      'api::categoria-cosa-fare-plus.categoria-cosa-fare-plus': ApiCategoriaCosaFarePlusCategoriaCosaFarePlus;
       'api::categoria-cosa-fare.categoria-cosa-fare': ApiCategoriaCosaFareCategoriaCosaFare;
       'api::categoria-download.categoria-download': ApiCategoriaDownloadCategoriaDownload;
       'api::categoria-esplora.categoria-esplora': ApiCategoriaEsploraCategoriaEsplora;

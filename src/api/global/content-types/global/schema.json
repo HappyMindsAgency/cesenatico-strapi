@@ -49,16 +49,6 @@
       },
       "required": true
     },
-    "Navigazione": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "navigazione.menu-item",
-      "repeatable": true
-    },
     "cesenaticoPlus": {
       "type": "component",
       "pluginOptions": {

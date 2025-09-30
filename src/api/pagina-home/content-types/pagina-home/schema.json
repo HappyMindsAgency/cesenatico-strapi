@@ -25,6 +25,16 @@
       "component": "custom.header-hero",
       "repeatable": true
     },
+    "intro": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.intro",
+      "repeatable": false
+    },
     "introTitolo": {
       "type": "string",
       "pluginOptions": {
@@ -102,6 +112,16 @@
       },
       "component": "custom.link-correlato",
       "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
     }
   }
 }
