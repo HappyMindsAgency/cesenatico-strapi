@@ -389,6 +389,10 @@ export interface ApiArticoloArticolo extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    categoria_cosa_fare: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::categoria-cosa-fare.categoria-cosa-fare'
+    >;
     categoria_esplora: Schema.Attribute.Relation<
       'manyToMany',
       'api::categoria-esplora.categoria-esplora'
@@ -456,6 +460,7 @@ export interface ApiCategoriaCosaFareCategoriaCosaFare
     };
   };
   attributes: {
+    articoli: Schema.Attribute.Relation<'manyToMany', 'api::articolo.articolo'>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
