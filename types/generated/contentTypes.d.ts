@@ -548,6 +548,18 @@ export interface ApiCategoriaCosaFarePlusCategoriaCosaFarePlus
       'api::categoria-cosa-fare-plus.categoria-cosa-fare-plus'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID<'titolo'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     sottotitolo: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

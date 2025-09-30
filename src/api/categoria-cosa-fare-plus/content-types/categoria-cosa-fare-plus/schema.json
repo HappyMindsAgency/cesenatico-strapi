@@ -23,6 +23,15 @@
         }
       }
     },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    },
     "sottotitolo": {
       "type": "string",
       "pluginOptions": {
@@ -67,6 +76,16 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::categoria-esplora.categoria-esplora"
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
     }
   }
 }
