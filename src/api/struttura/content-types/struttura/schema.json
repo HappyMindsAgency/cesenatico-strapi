@@ -232,12 +232,6 @@
       "component": "seo-component.seo",
       "repeatable": false
     },
-    "categoria_cosa_fare": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categoria-cosa-fare.categoria-cosa-fare",
-      "inversedBy": "struttura"
-    },
     "telefono2": {
       "type": "string",
       "pluginOptions": {
@@ -246,6 +240,12 @@
         }
       },
       "required": true
+    },
+    "categoria_cosa_fare_plus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria-cosa-fare-plus.categoria-cosa-fare-plus",
+      "mappedBy": "struttura"
     }
   }
 }

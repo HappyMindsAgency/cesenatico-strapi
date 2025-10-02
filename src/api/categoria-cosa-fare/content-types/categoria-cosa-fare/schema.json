@@ -117,12 +117,6 @@
       "component": "seo-component.seo",
       "repeatable": false
     },
-    "struttura": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::struttura.struttura",
-      "mappedBy": "categoria_cosa_fare"
-    },
     "articoli": {
       "type": "relation",
       "relation": "manyToMany",
