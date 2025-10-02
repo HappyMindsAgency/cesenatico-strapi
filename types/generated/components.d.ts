@@ -706,7 +706,9 @@ export interface ServiziRistorazioneEnogastronomia
     pescatoLocale: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     piattiTradizionali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    prodottiBio: Schema.Attribute.Boolean;
+    prenotazioneOnline: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    prodottiBio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     prodottiLocali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
   };

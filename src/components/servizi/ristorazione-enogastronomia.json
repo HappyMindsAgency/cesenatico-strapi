@@ -19,7 +19,12 @@
       "default": false
     },
     "prodottiBio": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
+    },
+    "prenotazioneOnline": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}
