@@ -920,6 +920,7 @@ export interface SharedIntro extends Struct.ComponentSchema {
     icon: 'pin';
   };
   attributes: {
+    etichettaLink: Schema.Attribute.String;
     immagine: Schema.Attribute.Media<'images'>;
     occhiello: Schema.Attribute.String;
     testo: Schema.Attribute.RichText;

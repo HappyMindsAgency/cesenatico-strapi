@@ -21,6 +21,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "etichettaLink": {
+      "type": "string"
     }
   },
   "config": {}
