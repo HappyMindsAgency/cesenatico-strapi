@@ -92,6 +92,12 @@
       "relation": "manyToMany",
       "target": "api::struttura.struttura",
       "inversedBy": "categoria_cosa_fare_plus"
+    },
+    "operatore": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::operatore.operatore",
+      "inversedBy": "categoria_cosa_fare_plus"
     }
   }
 }
