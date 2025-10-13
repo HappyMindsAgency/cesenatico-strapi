@@ -246,6 +246,15 @@
       "relation": "manyToMany",
       "target": "api::categoria-cosa-fare-plus.categoria-cosa-fare-plus",
       "mappedBy": "struttura"
+    },
+    "richiestaCollegamento": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": false
     }
   }
 }
