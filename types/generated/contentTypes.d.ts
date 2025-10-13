@@ -1154,13 +1154,6 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<true>;
-    anteprima: Schema.Attribute.RichText &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     categoria_evento: Schema.Attribute.Relation<
       'oneToMany',
       'api::categoria-evento.categoria-evento'

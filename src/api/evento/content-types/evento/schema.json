@@ -45,15 +45,6 @@
         "images"
       ]
     },
-    "anteprima": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "descrizione": {
       "type": "richtext",
       "pluginOptions": {
