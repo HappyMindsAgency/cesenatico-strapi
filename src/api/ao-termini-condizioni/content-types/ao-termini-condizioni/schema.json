@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "ao_termini_condizionis",
+  "info": {
+    "singularName": "ao-termini-condizioni",
+    "pluralName": "ao-termini-condizionis",
+    "displayName": "07.01.02 AO Termini e condizioni"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "contenuto": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-component.seo",
+      "repeatable": false
+    }
+  }
+}
