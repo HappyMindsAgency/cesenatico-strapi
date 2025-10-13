@@ -235,6 +235,11 @@
       "target": "api::categoria-cosa-fare.categoria-cosa-fare",
       "mappedBy": "experience"
     },
+    "tipologia_experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tipologia-experience.tipologia-experience"
+    },
     "contattoEmail": {
       "type": "email",
       "pluginOptions": {

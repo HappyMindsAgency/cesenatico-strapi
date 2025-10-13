@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipologia_experiences",
+  "info": {
+    "singularName": "tipologia-experience",
+    "pluralName": "tipologia-experiences",
+    "displayName": "Tipologia Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo"
+    }
+  }
+}

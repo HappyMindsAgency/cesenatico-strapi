@@ -1518,6 +1518,10 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::struttura.struttura'
     >;
+    tipologia_experience: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::tipologia-experience.tipologia-experience'
+    >;
     titolo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -4391,6 +4395,51 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTipologiaExperienceTipologiaExperience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tipologia_experiences';
+  info: {
+    displayName: 'Tipologia Experience';
+    pluralName: 'tipologia-experiences';
+    singularName: 'tipologia-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tipologia-experience.tipologia-experience'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'titolo'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTipologiaStrutturaTipologiaStruttura
   extends Struct.CollectionTypeSchema {
   collectionName: 'tipologie_struttura';
@@ -4995,6 +5044,7 @@ declare module '@strapi/strapi' {
       'api::servizio.servizio': ApiServizioServizio;
       'api::stagionalita.stagionalita': ApiStagionalitaStagionalita;
       'api::struttura.struttura': ApiStrutturaStruttura;
+      'api::tipologia-experience.tipologia-experience': ApiTipologiaExperienceTipologiaExperience;
       'api::tipologia-struttura.tipologia-struttura': ApiTipologiaStrutturaTipologiaStruttura;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
