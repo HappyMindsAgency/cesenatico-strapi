@@ -1219,6 +1219,10 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
         };
       }>;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::evento.evento'>;
+    operatore: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::operatore.operatore'
+    >;
     organizzatori: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1720,6 +1724,7 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    evento: Schema.Attribute.Relation<'oneToMany', 'api::evento.evento'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

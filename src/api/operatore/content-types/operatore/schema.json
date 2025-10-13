@@ -110,6 +110,12 @@
       "relation": "manyToMany",
       "target": "api::categoria-cosa-fare-plus.categoria-cosa-fare-plus",
       "mappedBy": "operatore"
+    },
+    "evento": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evento.evento",
+      "mappedBy": "operatore"
     }
   }
 }
