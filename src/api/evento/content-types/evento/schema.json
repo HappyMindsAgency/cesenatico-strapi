@@ -166,6 +166,14 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
+    },
+    "localita": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
