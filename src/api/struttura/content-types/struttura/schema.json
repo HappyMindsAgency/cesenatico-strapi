@@ -74,7 +74,7 @@
       },
       "required": true
     },
-    "localitas": {
+    "localita": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -256,11 +256,13 @@
       },
       "default": false
     },
-    "localita": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::localita.localita",
-      "inversedBy": "struttura"
+    "localita2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
