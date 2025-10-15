@@ -33,6 +33,12 @@
       },
       "targetField": "titolo",
       "required": false
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::struttura.struttura",
+      "mappedBy": "localita"
     }
   }
 }

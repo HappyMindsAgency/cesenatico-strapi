@@ -74,15 +74,6 @@
       },
       "required": true
     },
-    "localita": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
     "pivaCode": {
       "type": "string",
       "pluginOptions": {
@@ -256,13 +247,11 @@
       },
       "default": false
     },
-    "localita2": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "localita": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::localita.localita",
+      "inversedBy": "struttura"
     }
   }
 }

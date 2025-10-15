@@ -1591,6 +1591,10 @@ export interface ApiLocalitaLocalita extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    struttura: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::struttura.struttura'
+    >;
     titolo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -4300,19 +4304,7 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
         };
       }>;
     locale: Schema.Attribute.String;
-    localita: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    localita2: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    localita: Schema.Attribute.Relation<'manyToOne', 'api::localita.localita'>;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::struttura.struttura'
