@@ -23,7 +23,8 @@
       "default": false
     },
     "wifi": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "tvSmartTv": {
       "type": "boolean",

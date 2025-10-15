@@ -349,7 +349,7 @@ export interface ServiziAppartamentiFamily extends Struct.ComponentSchema {
     noleggioPasseggini: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     scaldaBiberon: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    sponde: Schema.Attribute.Boolean;
+    sponde: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     tariffeFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     vaschettaNeonati: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -382,7 +382,7 @@ export interface ServiziAppartamentiMain extends Struct.ComponentSchema {
     spaziEsterni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     tvSmartTv: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     vistaMare: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    wifi: Schema.Attribute.Boolean;
+    wifi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 

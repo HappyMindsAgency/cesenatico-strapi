@@ -1560,6 +1560,54 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLocalitaLocalita extends Struct.CollectionTypeSchema {
+  collectionName: 'localitas';
+  info: {
+    displayName: 'Localit\u00E0';
+    pluralName: 'localitas';
+    singularName: 'localita';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::localita.localita'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'titolo'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    struttura: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::struttura.struttura'
+    >;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOffertaOfferta extends Struct.CollectionTypeSchema {
   collectionName: 'offerte';
   info: {
@@ -4256,7 +4304,8 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
         };
       }>;
     locale: Schema.Attribute.String;
-    localita: Schema.Attribute.String &
+    localita: Schema.Attribute.Relation<'manyToOne', 'api::localita.localita'>;
+    localitas: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -4326,7 +4375,6 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
         };
       }>;
     telefono2: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -4966,6 +5014,7 @@ declare module '@strapi/strapi' {
       'api::evento.evento': ApiEventoEvento;
       'api::experience.experience': ApiExperienceExperience;
       'api::global.global': ApiGlobalGlobal;
+      'api::localita.localita': ApiLocalitaLocalita;
       'api::offerta.offerta': ApiOffertaOfferta;
       'api::operatore.operatore': ApiOperatoreOperatore;
       'api::pagina-autunno.pagina-autunno': ApiPaginaAutunnoPaginaAutunno;

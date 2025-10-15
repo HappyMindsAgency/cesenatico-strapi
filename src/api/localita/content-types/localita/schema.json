@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localitas",
+  "info": {
+    "singularName": "localita",
+    "pluralName": "localitas",
+    "displayName": "Località"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "titolo",
+      "required": false
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::struttura.struttura",
+      "mappedBy": "localita"
+    }
+  }
+}

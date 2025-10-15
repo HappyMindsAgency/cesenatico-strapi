@@ -23,7 +23,8 @@
       "default": false
     },
     "sponde": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "giochiBambini": {
       "type": "boolean",
