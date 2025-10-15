@@ -1,0 +1,183 @@
+{
+  "collectionName": "components_custom_periodo_aperturas",
+  "info": {
+    "displayName": "periodoApertura",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "tuttoAnno": {
+      "type": "boolean",
+      "default": false
+    },
+    "gennaio": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "febbraio": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "marzo": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "aprile": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "maggio": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "giugno": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "luglio": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "agosto": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "settembre": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "ottobre": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "novembre": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "dicembre": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttoAnno"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    }
+  },
+  "config": {}
+}

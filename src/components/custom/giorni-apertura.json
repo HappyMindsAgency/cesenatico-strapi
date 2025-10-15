@@ -1,0 +1,113 @@
+{
+  "collectionName": "components_custom_giorni_aperturas",
+  "info": {
+    "displayName": "giorniApertura",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "tuttaSettimana": {
+      "type": "boolean",
+      "default": false
+    },
+    "lunedi": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "martedi": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "mercoledi": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "giovedi": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "venerdi": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "sabato": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "domenica": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "tuttaSettimana"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    }
+  },
+  "config": {}
+}

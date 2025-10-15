@@ -4290,6 +4290,15 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    giorniApertura: Schema.Attribute.Component<
+      'custom.giorni-apertura',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     indirizzo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -4314,6 +4323,27 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::operatore.operatore'
     >;
+    orarioApertura: Schema.Attribute.Time &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    orarioChiusura: Schema.Attribute.Time &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    periodoApertura: Schema.Attribute.Component<
+      'custom.periodo-apertura',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     pivaCode: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

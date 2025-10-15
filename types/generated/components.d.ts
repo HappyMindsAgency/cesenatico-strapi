@@ -27,6 +27,25 @@ export interface CustomCtaPremium extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomGiorniApertura extends Struct.ComponentSchema {
+  collectionName: 'components_custom_giorni_aperturas';
+  info: {
+    displayName: 'giorniApertura';
+    icon: 'briefcase';
+  };
+  attributes: {
+    domenica: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    giovedi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    lunedi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    martedi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    mercoledi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    sabato: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    tuttaSettimana: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    venerdi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface CustomHeaderHero extends Struct.ComponentSchema {
   collectionName: 'components_custom_header_heroes';
   info: {
@@ -81,6 +100,29 @@ export interface CustomMezzoTrasporto extends Struct.ComponentSchema {
     icona: Schema.Attribute.String;
     testo: Schema.Attribute.RichText;
     titolo: Schema.Attribute.String;
+  };
+}
+
+export interface CustomPeriodoApertura extends Struct.ComponentSchema {
+  collectionName: 'components_custom_periodo_aperturas';
+  info: {
+    displayName: 'periodoApertura';
+    icon: 'calendar';
+  };
+  attributes: {
+    agosto: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    aprile: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    dicembre: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    febbraio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    gennaio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    giugno: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    luglio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    maggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    marzo: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    novembre: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    ottobre: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    settembre: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    tuttoAnno: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -1153,10 +1195,12 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'custom.componente-tematica': CustomComponenteTematica;
       'custom.cta-premium': CustomCtaPremium;
+      'custom.giorni-apertura': CustomGiorniApertura;
       'custom.header-hero': CustomHeaderHero;
       'custom.link-correlato': CustomLinkCorrelato;
       'custom.mappa': CustomMappa;
       'custom.mezzo-trasporto': CustomMezzoTrasporto;
+      'custom.periodo-apertura': CustomPeriodoApertura;
       'custom.sezione-tematica': CustomSezioneTematica;
       'custom.tab-sezioni': CustomTabSezioni;
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;

@@ -252,6 +252,42 @@
       "relation": "manyToOne",
       "target": "api::localita.localita",
       "inversedBy": "struttura"
+    },
+    "orarioApertura": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "orarioChiusura": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "periodoApertura": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "custom.periodo-apertura",
+      "repeatable": false
+    },
+    "giorniApertura": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "custom.giorni-apertura",
+      "repeatable": false
     }
   }
 }
