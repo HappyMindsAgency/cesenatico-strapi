@@ -1345,10 +1345,13 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    giorniSettimana: Schema.Attribute.String &
+    giorniApertura: Schema.Attribute.Component<
+      'custom.giorni-apertura',
+      false
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     gratuito: Schema.Attribute.Boolean &
@@ -1375,10 +1378,16 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    orari: Schema.Attribute.RichText &
+    orarioFine: Schema.Attribute.Time &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
+        };
+      }>;
+    orarioInizio: Schema.Attribute.Time &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     partecipantiMax: Schema.Attribute.Integer &

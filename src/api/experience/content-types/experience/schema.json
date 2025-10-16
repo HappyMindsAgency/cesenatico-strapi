@@ -133,22 +133,6 @@
         }
       }
     },
-    "giorniSettimana": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "orari": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "accessibile": {
       "type": "boolean",
       "pluginOptions": {
@@ -276,6 +260,32 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
+    },
+    "giorniApertura": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "custom.giorni-apertura",
+      "repeatable": false
+    },
+    "orarioInizio": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "orarioFine": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
