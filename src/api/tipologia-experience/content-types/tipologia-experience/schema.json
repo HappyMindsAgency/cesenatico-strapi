@@ -32,6 +32,12 @@
         }
       },
       "targetField": "titolo"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "tipologia_experience"
     }
   }
 }

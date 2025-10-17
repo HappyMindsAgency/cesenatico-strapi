@@ -257,8 +257,9 @@
     },
     "tipologia_experience": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::tipologia-experience.tipologia-experience"
+      "relation": "manyToOne",
+      "target": "api::tipologia-experience.tipologia-experience",
+      "inversedBy": "experience"
     },
     "contattoEmail": {
       "type": "email",
