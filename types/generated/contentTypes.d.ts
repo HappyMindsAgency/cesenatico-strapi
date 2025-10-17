@@ -1447,13 +1447,13 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    serviziEsclusi: Schema.Attribute.String &
+    serviziEsclusi: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    serviziInclusi: Schema.Attribute.String &
+    serviziInclusi: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

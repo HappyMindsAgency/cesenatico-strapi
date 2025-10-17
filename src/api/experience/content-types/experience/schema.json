@@ -54,7 +54,7 @@
       }
     },
     "serviziInclusi": {
-      "type": "string",
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -62,7 +62,7 @@
       }
     },
     "serviziEsclusi": {
-      "type": "string",
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
