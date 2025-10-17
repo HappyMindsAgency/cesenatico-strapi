@@ -45,6 +45,16 @@
         "images"
       ]
     },
+    "inEvidenza": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom.in-evidenza",
+      "repeatable": false
+    },
     "content": {
       "type": "richtext",
       "pluginOptions": {

@@ -45,6 +45,16 @@
         "images"
       ]
     },
+    "inEvidenza": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom.in-evidenza",
+      "repeatable": false
+    },
     "descrizione": {
       "type": "richtext",
       "pluginOptions": {
@@ -117,6 +127,16 @@
       "relation": "oneToMany",
       "target": "api::stagionalita.stagionalita"
     },
+    "giorniApertura": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "custom.giorni-apertura",
+      "repeatable": false
+    },
     "disponibileInizio": {
       "type": "date",
       "pluginOptions": {
@@ -127,6 +147,22 @@
     },
     "disponibileFine": {
       "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "orarioInizio": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "orarioFine": {
+      "type": "time",
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -260,32 +296,6 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
-    },
-    "giorniApertura": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "custom.giorni-apertura",
-      "repeatable": false
-    },
-    "orarioInizio": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "orarioFine": {
-      "type": "time",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
     }
   }
 }

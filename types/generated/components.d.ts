@@ -61,6 +61,19 @@ export interface CustomHeaderHero extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomInEvidenza extends Struct.ComponentSchema {
+  collectionName: 'components_custom_in_evidenzas';
+  info: {
+    displayName: 'inEvidenza';
+    icon: 'star';
+  };
+  attributes: {
+    inCategoria: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    inHome: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    inStagione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface CustomLinkCorrelato extends Struct.ComponentSchema {
   collectionName: 'components_custom_link_correlatoes';
   info: {
@@ -1197,6 +1210,7 @@ declare module '@strapi/strapi' {
       'custom.cta-premium': CustomCtaPremium;
       'custom.giorni-apertura': CustomGiorniApertura;
       'custom.header-hero': CustomHeaderHero;
+      'custom.in-evidenza': CustomInEvidenza;
       'custom.link-correlato': CustomLinkCorrelato;
       'custom.mappa': CustomMappa;
       'custom.mezzo-trasporto': CustomMezzoTrasporto;

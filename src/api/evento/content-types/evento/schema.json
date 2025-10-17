@@ -45,6 +45,34 @@
         "images"
       ]
     },
+    "prezzo": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "gratuito"
+            },
+            false
+          ]
+        }
+      }
+    },
+    "inEvidenza": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom.in-evidenza",
+      "repeatable": false
+    },
     "descrizione": {
       "type": "richtext",
       "pluginOptions": {
@@ -78,24 +106,6 @@
       },
       "default": true
     },
-    "prezzo": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "conditions": {
-        "visible": {
-          "==": [
-            {
-              "var": "gratuito"
-            },
-            false
-          ]
-        }
-      }
-    },
     "organizzatori": {
       "type": "richtext",
       "pluginOptions": {
@@ -120,10 +130,24 @@
         }
       }
     },
+    "localita": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "categoria_evento": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::categoria-evento.categoria-evento"
+    },
+    "operatore": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::operatore.operatore",
+      "inversedBy": "evento"
     },
     "stagionalitas": {
       "type": "relation",
@@ -157,20 +181,6 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
-    },
-    "localita": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "operatore": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::operatore.operatore",
-      "inversedBy": "evento"
     }
   }
 }

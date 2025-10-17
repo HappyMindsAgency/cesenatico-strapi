@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_custom_in_evidenzas",
+  "info": {
+    "displayName": "inEvidenza",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "inHome": {
+      "type": "boolean",
+      "default": false
+    },
+    "inCategoria": {
+      "type": "boolean",
+      "default": false
+    },
+    "inStagione": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}
