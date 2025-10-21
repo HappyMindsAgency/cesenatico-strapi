@@ -1858,6 +1858,13 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    tipologiaAzienda: Schema.Attribute.Enumeration<['fisica', 'giuridica']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

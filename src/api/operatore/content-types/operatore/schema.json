@@ -56,6 +56,16 @@
         "i18n": {
           "localized": false
         }
+      },
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "tipologiaAzienda"
+            },
+            "giuridica"
+          ]
+        }
       }
     },
     "cfCode": {
@@ -63,6 +73,16 @@
       "pluginOptions": {
         "i18n": {
           "localized": false
+        }
+      },
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "tipologiaAzienda"
+            },
+            "fisica"
+          ]
         }
       }
     },
@@ -116,6 +136,19 @@
       "relation": "oneToMany",
       "target": "api::evento.evento",
       "mappedBy": "operatore"
+    },
+    "tipologiaAzienda": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "enum": [
+        "fisica",
+        "giuridica"
+      ]
     }
   }
 }
