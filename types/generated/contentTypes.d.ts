@@ -1858,7 +1858,9 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    tipologiaAzienda: Schema.Attribute.Enumeration<['fisica', 'giuridica']> &
+    tipologiaOperatore: Schema.Attribute.Enumeration<
+      ['personaFisica', 'enteAzienda']
+    > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
