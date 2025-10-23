@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::struttura.struttura",
       "mappedBy": "categoria_struttura"
+    },
+    "operatore": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::operatore.operatore",
+      "inversedBy": "categoria_struttura"
     }
   }
 }

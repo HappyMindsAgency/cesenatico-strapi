@@ -1014,6 +1014,10 @@ export interface ApiCategoriaStrutturaCategoriaStruttura
       'oneToMany',
       'api::categoria-struttura.categoria-struttura'
     >;
+    operatore: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::operatore.operatore'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'titolo'> &
       Schema.Attribute.SetPluginOptions<{
@@ -1786,6 +1790,10 @@ export interface ApiOperatoreOperatore extends Struct.CollectionTypeSchema {
     categoria_cosa_fare_plus: Schema.Attribute.Relation<
       'manyToMany',
       'api::categoria-cosa-fare-plus.categoria-cosa-fare-plus'
+    >;
+    categoria_struttura: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::categoria-struttura.categoria-struttura'
     >;
     cfCode: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
