@@ -104,6 +104,25 @@
       },
       "default": false
     },
+    "etichettaPrezzo": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "gratuito"
+            },
+            false
+          ]
+        }
+      },
+      "default": "A partire da"
+    },
     "prezzo": {
       "type": "integer",
       "pluginOptions": {
