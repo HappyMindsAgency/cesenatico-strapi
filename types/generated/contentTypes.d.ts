@@ -1961,6 +1961,12 @@ export interface ApiPaginaAutunnoPaginaAutunno extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    anteprima: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2987,6 +2993,12 @@ export interface ApiPaginaEstatePaginaEstate extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    anteprima: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3416,6 +3428,12 @@ export interface ApiPaginaInvernoPaginaInverno extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    anteprima: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -3922,6 +3940,12 @@ export interface ApiPaginaPrimaveraPaginaPrimavera
     };
   };
   attributes: {
+    anteprima: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

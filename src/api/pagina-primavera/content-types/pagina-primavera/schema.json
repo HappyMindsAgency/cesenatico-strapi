@@ -84,6 +84,14 @@
         }
       }
     },
+    "anteprima": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "stagionalita": {
       "type": "relation",
       "relation": "oneToOne",
