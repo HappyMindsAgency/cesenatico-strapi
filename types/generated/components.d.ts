@@ -3,7 +3,7 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface CustomComponenteTematica extends Struct.ComponentSchema {
   collectionName: 'components_custom_componente_tematicas';
   info: {
-    displayName: 'ComponenteTematica';
+    displayName: 'componenteTematica';
     icon: 'apps';
   };
   attributes: {
