@@ -1667,13 +1667,22 @@ export interface ApiLandingFraDeuEspLandingFraDeuEsp
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    esploraSottotitolo: Schema.Attribute.String &
+    esploraTab: Schema.Attribute.Component<'custom.cta-premium', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    esploraTab: Schema.Attribute.Component<'custom.componente-tematica', true> &
+    esploraTabbb: Schema.Attribute.Component<
+      'custom.componente-tematica',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    esploraTesto: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

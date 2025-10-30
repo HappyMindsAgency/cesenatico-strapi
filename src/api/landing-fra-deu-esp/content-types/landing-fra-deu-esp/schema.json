@@ -74,8 +74,8 @@
         }
       }
     },
-    "esploraSottotitolo": {
-      "type": "string",
+    "esploraTesto": {
+      "type": "richtext",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -83,6 +83,16 @@
       }
     },
     "esploraTab": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom.cta-premium",
+      "repeatable": true
+    },
+    "esploraTabbb": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
