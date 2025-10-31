@@ -61,6 +61,22 @@
       "component": "custom.link-correlato",
       "repeatable": true
     },
+    "titoloTematiche": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sottotitoloTematiche": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "sezioniTematica": {
       "type": "component",
       "pluginOptions": {
