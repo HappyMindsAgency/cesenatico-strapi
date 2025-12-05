@@ -23,7 +23,8 @@
       "default": false
     },
     "cucinaVegetariana": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "piscina": {
       "type": "boolean",
@@ -78,6 +79,14 @@
       "default": false
     },
     "escursioni": {
+      "type": "boolean",
+      "default": false
+    },
+    "frigoBar": {
+      "type": "boolean",
+      "default": false
+    },
+    "areaFitness": {
       "type": "boolean",
       "default": false
     }

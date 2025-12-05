@@ -23,7 +23,8 @@
       "default": false
     },
     "venditaOnline": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "spedizione": {
       "type": "boolean",
@@ -54,6 +55,22 @@
       "default": false
     },
     "parcheggio": {
+      "type": "boolean",
+      "default": false
+    },
+    "articoliFamiglie": {
+      "type": "boolean",
+      "default": false
+    },
+    "aperturaDomenicale": {
+      "type": "boolean",
+      "default": false
+    },
+    "noleggioBici": {
+      "type": "boolean",
+      "default": false
+    },
+    "boutiqueSartorialeArtigianale": {
       "type": "boolean",
       "default": false
     }

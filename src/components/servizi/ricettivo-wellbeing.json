@@ -23,7 +23,8 @@
       "default": false
     },
     "escursioniBenessere": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "omaggioBenessere": {
       "type": "boolean",

@@ -10,46 +10,19 @@
       "type": "boolean",
       "default": false
     },
-    "yogaMeditazione": {
-      "type": "boolean",
-      "default": false
-    },
-    "ritiri": {
-      "type": "boolean",
-      "default": false
-    },
-    "massaggiTrattamenti": {
-      "type": "boolean",
-      "default": false
-    },
-    "workshopOlistici": {
-      "type": "boolean"
-    },
-    "talassoterapiaFanghi": {
-      "type": "boolean",
-      "default": false
-    },
-    "serviziDomicilio": {
-      "type": "boolean",
-      "default": false
-    },
     "pacchetti": {
       "type": "boolean",
       "default": false
     },
-    "lezioniPrivate": {
+    "laboratoriWorkshopCorsi": {
       "type": "boolean",
       "default": false
     },
-    "sportAcquatici": {
+    "pagamentiElettronici": {
       "type": "boolean",
       "default": false
     },
-    "serviziSpiaggia": {
-      "type": "boolean",
-      "default": false
-    },
-    "escursioni": {
+    "prenotazioneOnline": {
       "type": "boolean",
       "default": false
     }

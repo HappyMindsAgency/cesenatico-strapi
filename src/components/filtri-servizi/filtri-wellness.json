@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_welnesses",
+  "info": {
+    "displayName": "filtriWellness",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.wellness-main",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

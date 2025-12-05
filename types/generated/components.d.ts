@@ -274,7 +274,8 @@ export interface FiltriServiziFiltriServizi extends Struct.ComponentSchema {
         'appartamenti',
         'balneari',
         'commercioArtigianato',
-        'guideOperatoriWellness',
+        'guideAccompagnatoriTuristici',
+        'wellness',
         'ricettivo',
         'ristorazione',
       ]
@@ -304,6 +305,21 @@ export interface FiltriServiziFiltriServizi extends Struct.ComponentSchema {
       'filtri-servizi.filtri-ristorazione',
       false
     >;
+    filtriWellness: Schema.Attribute.Component<
+      'filtri-servizi.filtri-wellness',
+      false
+    >;
+  };
+}
+
+export interface FiltriServiziFiltriWellness extends Struct.ComponentSchema {
+  collectionName: 'components_filtri_servizi_filtri_welnesses';
+  info: {
+    displayName: 'filtriWellness';
+    icon: 'apps';
+  };
+  attributes: {
+    main: Schema.Attribute.Component<'servizi.wellness-main', false>;
   };
 }
 
@@ -477,6 +493,7 @@ export interface ServiziBalneariEnogastronomia extends Struct.ComponentSchema {
     prodottiBio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     provenienzaLocale: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    seggiolone: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -487,6 +504,7 @@ export interface ServiziBalneariFamily extends Struct.ComponentSchema {
     icon: 'puzzle';
   };
   attributes: {
+    animazione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     areaBambini: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     ausiliPasseggino: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -504,20 +522,18 @@ export interface ServiziBalneariMain extends Struct.ComponentSchema {
     icon: 'sun';
   };
   attributes: {
-    adattoGruppi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     animazione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     barRistorazione: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    campiSportivi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     canoeSupPedalo: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    corsiSportivi: Schema.Attribute.Boolean;
+    corsiSportivi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     cucinaGlutenFree: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     cucinaVegetariana: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     eventiSpiaggia: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    ombrelloneLettini: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     pagamentiElettronici: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -525,15 +541,12 @@ export interface ServiziBalneariMain extends Struct.ComponentSchema {
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     prenotazioneServiziOnline: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    serviziDisabilita: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
+    sediaJob: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziFamiglia: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     serviziSpiaggia: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     spiaggiaAccessibile: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    strutturaAccessibile: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     wifi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
@@ -562,12 +575,19 @@ export interface ServiziCommercioArtigianatoMain
     icon: 'gate';
   };
   attributes: {
+    aperturaDomenicale: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    articoliFamiglie: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     artigianatoLocale: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    boutiqueSartorialeArtigianale: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     degustazioni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     laboratoriWorkshopCorsi: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     multilingua: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    noleggioBici: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     pacchettiRegalo: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -578,7 +598,7 @@ export interface ServiziCommercioArtigianatoMain
     spedizione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     strutturaAccessibile: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    venditaOnline: Schema.Attribute.Boolean;
+    venditaOnline: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     visiteGuidate: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
@@ -591,25 +611,14 @@ export interface ServiziGuideOperatoriWellnessMain
     icon: 'gate';
   };
   attributes: {
-    escursioni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    lezioniPrivate: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    massaggiTrattamenti: Schema.Attribute.Boolean &
+    laboratoriWorkshopCorsi: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     pacchetti: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    ritiri: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziDomicilio: Schema.Attribute.Boolean &
+    pagamentiElettronici: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    prenotazioneOnline: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziSpiaggia: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    sportAcquatici: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    talassoterapiaFanghi: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    workshopOlistici: Schema.Attribute.Boolean;
-    yogaMeditazione: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -626,7 +635,7 @@ export interface ServiziRicettivoEnogastronomia extends Struct.ComponentSchema {
     pescatoLocale: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     piattiTradizionali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    prodottiBio: Schema.Attribute.Boolean;
+    prodottiBio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     prodottiLocali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
   };
@@ -650,7 +659,7 @@ export interface ServiziRicettivoFamily extends Struct.ComponentSchema {
     scaldaBiberon: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     seggiolone: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     sponde: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    tariffeFamily: Schema.Attribute.Boolean;
+    tariffeFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     vaschettaNeonati: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
   };
@@ -665,13 +674,16 @@ export interface ServiziRicettivoMain extends Struct.ComponentSchema {
   attributes: {
     adultsOnly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     allInclusive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    areaFitness: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     ariaCondizionata: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     cucinaGlutenFree: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     cucinaTipica: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    cucinaVegetariana: Schema.Attribute.Boolean;
+    cucinaVegetariana: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     escursioni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    frigoBar: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     piscina: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -715,7 +727,8 @@ export interface ServiziRicettivoSport extends Struct.ComponentSchema {
     areaFitness: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     convenzioniFisioterapiaMassaggi: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    custodiaAttrezzature: Schema.Attribute.Boolean;
+    custodiaAttrezzature: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     flessibilitaOrariPasti: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     kitRiparazione: Schema.Attribute.Boolean &
@@ -740,7 +753,8 @@ export interface ServiziRicettivoWellbeing extends Struct.ComponentSchema {
   attributes: {
     convenzioneStabilimenti: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    escursioniBenessere: Schema.Attribute.Boolean;
+    escursioniBenessere: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     lavanderia: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     omaggioBenessere: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -758,6 +772,7 @@ export interface ServiziRistorazioneEnogastronomia
     icon: 'gate';
   };
   attributes: {
+    degustazioni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     pescatoLocale: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     piattiTradizionali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -765,6 +780,8 @@ export interface ServiziRistorazioneEnogastronomia
       Schema.Attribute.DefaultTo<false>;
     prodottiBio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     prodottiLocali: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    venditaProdottiLocali: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
   };
 }
@@ -777,21 +794,51 @@ export interface ServiziRistorazioneMain extends Struct.ComponentSchema {
   };
   attributes: {
     adattoGruppi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    bar: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     cucinaGlutenFree: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    cucinaVegana: Schema.Attribute.Boolean;
+    cucinaVegana: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     cucinaVegetariana: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     menuBambini: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     pizzeria: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    ristorazione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     strutturaAccessibile: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     vistaMare: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     wifi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
+export interface ServiziWellnessMain extends Struct.ComponentSchema {
+  collectionName: 'components_servizi_wellness_mains';
+  info: {
+    displayName: 'wellnessMain';
+    icon: 'gate';
+  };
+  attributes: {
+    lezioniPrivate: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    massaggiTrattamenti: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    pacchetti: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    pagamentiElettronici: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    prenotazioneOnline: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    ritiri: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    serviziSpiaggia: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    sportAcquatici: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    talassoterapiaFanghi: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    workshopOlistici: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    yogaMeditazione: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -1224,6 +1271,7 @@ declare module '@strapi/strapi' {
       'filtri-servizi.filtri-ricettivo': FiltriServiziFiltriRicettivo;
       'filtri-servizi.filtri-ristorazione': FiltriServiziFiltriRistorazione;
       'filtri-servizi.filtri-servizi': FiltriServiziFiltriServizi;
+      'filtri-servizi.filtri-wellness': FiltriServiziFiltriWellness;
       'navigazione.link-item': NavigazioneLinkItem;
       'navigazione.menu-item': NavigazioneMenuItem;
       'seo-component.meta-social': SeoComponentMetaSocial;
@@ -1245,6 +1293,7 @@ declare module '@strapi/strapi' {
       'servizi.ricettivo-wellbeing': ServiziRicettivoWellbeing;
       'servizi.ristorazione-enogastronomia': ServiziRistorazioneEnogastronomia;
       'servizi.ristorazione-main': ServiziRistorazioneMain;
+      'servizi.wellness-main': ServiziWellnessMain;
       'shared.box-correlato': SharedBoxCorrelato;
       'shared.call-to-action': SharedCallToAction;
       'shared.card-progetto': SharedCardProgetto;

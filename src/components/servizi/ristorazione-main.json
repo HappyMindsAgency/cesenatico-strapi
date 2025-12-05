@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "ristorazione": {
+    "bar": {
       "type": "boolean",
       "default": false
     },
@@ -23,7 +23,8 @@
       "default": false
     },
     "cucinaVegana": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "menuBambini": {
       "type": "boolean",

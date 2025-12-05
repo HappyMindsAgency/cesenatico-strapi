@@ -23,7 +23,8 @@
       "default": false
     },
     "prodottiBio": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "cucinaGlutenFree": {
       "type": "boolean",

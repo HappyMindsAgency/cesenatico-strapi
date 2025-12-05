@@ -6,10 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "adattoGruppi": {
-      "type": "boolean",
-      "default": false
-    },
     "animazione": {
       "type": "boolean",
       "default": false
@@ -23,7 +19,8 @@
       "default": false
     },
     "corsiSportivi": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "cucinaGlutenFree": {
       "type": "boolean",
@@ -34,10 +31,6 @@
       "default": false
     },
     "eventiSpiaggia": {
-      "type": "boolean",
-      "default": false
-    },
-    "ombrelloneLettini": {
       "type": "boolean",
       "default": false
     },
@@ -61,10 +54,6 @@
       "type": "boolean",
       "default": false
     },
-    "serviziDisabilita": {
-      "type": "boolean",
-      "default": false
-    },
     "serviziSpiaggia": {
       "type": "boolean",
       "default": false
@@ -73,11 +62,15 @@
       "type": "boolean",
       "default": false
     },
-    "strutturaAccessibile": {
+    "wifi": {
       "type": "boolean",
       "default": false
     },
-    "wifi": {
+    "sediaJob": {
+      "type": "boolean",
+      "default": false
+    },
+    "campiSportivi": {
       "type": "boolean",
       "default": false
     }

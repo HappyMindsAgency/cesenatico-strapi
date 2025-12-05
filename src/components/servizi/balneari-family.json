@@ -25,6 +25,10 @@
     "primoSoccorso": {
       "type": "boolean",
       "default": false
+    },
+    "animazione": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

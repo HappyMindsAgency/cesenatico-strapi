@@ -41,6 +41,10 @@
     "glutenFree": {
       "type": "boolean",
       "default": false
+    },
+    "seggiolone": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

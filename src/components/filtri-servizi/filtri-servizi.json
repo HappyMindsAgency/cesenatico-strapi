@@ -13,7 +13,8 @@
         "appartamenti",
         "balneari",
         "commercioArtigianato",
-        "guideOperatoriWellness",
+        "guideAccompagnatoriTuristici",
+        "wellness",
         "ricettivo",
         "ristorazione"
       ]
@@ -76,6 +77,21 @@
         }
       },
       "component": "filtri-servizi.filtri-guide-operatori-wellness",
+      "repeatable": false
+    },
+    "filtriWellness": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "categoriaServizi"
+            },
+            "wellness"
+          ]
+        }
+      },
+      "component": "filtri-servizi.filtri-wellness",
       "repeatable": false
     },
     "filtriRicettivo": {

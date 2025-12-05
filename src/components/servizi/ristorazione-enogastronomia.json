@@ -25,6 +25,14 @@
     "prenotazioneOnline": {
       "type": "boolean",
       "default": false
+    },
+    "degustazioni": {
+      "type": "boolean",
+      "default": false
+    },
+    "venditaProdottiLocali": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

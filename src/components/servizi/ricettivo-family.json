@@ -23,7 +23,8 @@
       "default": false
     },
     "tariffeFamily": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "alimentiBambini": {
       "type": "boolean",

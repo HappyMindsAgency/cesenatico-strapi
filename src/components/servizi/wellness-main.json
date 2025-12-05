@@ -1,48 +1,52 @@
 {
-  "collectionName": "components_servizi_ricettivo_sports",
+  "collectionName": "components_servizi_wellness_mains",
   "info": {
-    "displayName": "ricettivoSport",
+    "displayName": "wellnessMain",
     "icon": "gate"
   },
   "options": {},
   "attributes": {
-    "flessibilitaOrariPasti": {
+    "yogaMeditazione": {
       "type": "boolean",
       "default": false
     },
-    "pastiAlSacco": {
+    "ritiri": {
       "type": "boolean",
       "default": false
     },
-    "ristorazioneSportiva": {
+    "massaggiTrattamenti": {
       "type": "boolean",
       "default": false
     },
-    "lavanderia": {
+    "workshopOlistici": {
       "type": "boolean",
       "default": false
     },
-    "custodiaAttrezzature": {
+    "talassoterapiaFanghi": {
       "type": "boolean",
       "default": false
     },
-    "areaFitness": {
+    "pacchetti": {
       "type": "boolean",
       "default": false
     },
-    "convenzioniFisioterapiaMassaggi": {
+    "lezioniPrivate": {
       "type": "boolean",
       "default": false
     },
-    "kitRiparazione": {
+    "sportAcquatici": {
       "type": "boolean",
       "default": false
     },
-    "noleggioAttrezzatura": {
+    "serviziSpiaggia": {
       "type": "boolean",
       "default": false
     },
-    "prodottiEnergetici": {
+    "pagamentiElettronici": {
+      "type": "boolean",
+      "default": false
+    },
+    "prenotazioneOnline": {
       "type": "boolean",
       "default": false
     }
