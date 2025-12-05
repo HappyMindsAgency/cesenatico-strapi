@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_servizi_guide_operatori_wellness_mains",
+  "collectionName": "components_servizi_guide_accompagnatori_turistici_mains",
   "info": {
-    "displayName": "guideOperatoriWellnessMain",
+    "displayName": "guideAccompagnatoriTuristiciMain",
     "icon": "gate"
   },
   "options": {},

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_filtri_servizi_filtri_guide_accompagnatori_turisticis",
+  "info": {
+    "displayName": "filtriGuideAccompagnatoriTuristici",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "servizi.guide-accompagnatori-turistici-main",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

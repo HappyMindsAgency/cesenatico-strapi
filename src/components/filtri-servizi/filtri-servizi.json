@@ -64,7 +64,7 @@
       "component": "filtri-servizi.filtri-commercio-artigianato",
       "repeatable": false
     },
-    "filtriGuideOperatoriWellness": {
+    "filtriGuideAccompagnatoriTuristici": {
       "type": "component",
       "conditions": {
         "visible": {
@@ -76,7 +76,7 @@
           ]
         }
       },
-      "component": "filtri-servizi.filtri-guide-operatori-wellness",
+      "component": "filtri-servizi.filtri-guide-accompagnatori-turistici",
       "repeatable": false
     },
     "filtriWellness": {

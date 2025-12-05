@@ -212,16 +212,16 @@ export interface FiltriServiziFiltriCommercioArtigianato
   };
 }
 
-export interface FiltriServiziFiltriGuideOperatoriWellness
+export interface FiltriServiziFiltriGuideAccompagnatoriTuristici
   extends Struct.ComponentSchema {
-  collectionName: 'components_filtri_servizi_filtri_guide_operatori_welnesses';
+  collectionName: 'components_filtri_servizi_filtri_guide_accompagnatori_turisticis';
   info: {
-    displayName: 'filtriGuideOperatoriWellness';
+    displayName: 'filtriGuideAccompagnatoriTuristici';
     icon: 'apps';
   };
   attributes: {
     main: Schema.Attribute.Component<
-      'servizi.guide-operatori-wellness-main',
+      'servizi.guide-accompagnatori-turistici-main',
       false
     >;
   };
@@ -293,8 +293,8 @@ export interface FiltriServiziFiltriServizi extends Struct.ComponentSchema {
       'filtri-servizi.filtri-commercio-artigianato',
       false
     >;
-    filtriGuideOperatoriWellness: Schema.Attribute.Component<
-      'filtri-servizi.filtri-guide-operatori-wellness',
+    filtriGuideAccompagnatoriTuristici: Schema.Attribute.Component<
+      'filtri-servizi.filtri-guide-accompagnatori-turistici',
       false
     >;
     filtriRicettivo: Schema.Attribute.Component<
@@ -603,11 +603,11 @@ export interface ServiziCommercioArtigianatoMain
   };
 }
 
-export interface ServiziGuideOperatoriWellnessMain
+export interface ServiziGuideAccompagnatoriTuristiciMain
   extends Struct.ComponentSchema {
-  collectionName: 'components_servizi_guide_operatori_wellness_mains';
+  collectionName: 'components_servizi_guide_accompagnatori_turistici_mains';
   info: {
-    displayName: 'guideOperatoriWellnessMain';
+    displayName: 'guideAccompagnatoriTuristiciMain';
     icon: 'gate';
   };
   attributes: {
@@ -1267,7 +1267,7 @@ declare module '@strapi/strapi' {
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;
       'filtri-servizi.filtri-balneari': FiltriServiziFiltriBalneari;
       'filtri-servizi.filtri-commercio-artigianato': FiltriServiziFiltriCommercioArtigianato;
-      'filtri-servizi.filtri-guide-operatori-wellness': FiltriServiziFiltriGuideOperatoriWellness;
+      'filtri-servizi.filtri-guide-accompagnatori-turistici': FiltriServiziFiltriGuideAccompagnatoriTuristici;
       'filtri-servizi.filtri-ricettivo': FiltriServiziFiltriRicettivo;
       'filtri-servizi.filtri-ristorazione': FiltriServiziFiltriRistorazione;
       'filtri-servizi.filtri-servizi': FiltriServiziFiltriServizi;
@@ -1284,7 +1284,7 @@ declare module '@strapi/strapi' {
       'servizi.balneari-main': ServiziBalneariMain;
       'servizi.balneari-wellness': ServiziBalneariWellness;
       'servizi.commercio-artigianato-main': ServiziCommercioArtigianatoMain;
-      'servizi.guide-operatori-wellness-main': ServiziGuideOperatoriWellnessMain;
+      'servizi.guide-accompagnatori-turistici-main': ServiziGuideAccompagnatoriTuristiciMain;
       'servizi.ricettivo-enogastronomia': ServiziRicettivoEnogastronomia;
       'servizi.ricettivo-family': ServiziRicettivoFamily;
       'servizi.ricettivo-main': ServiziRicettivoMain;
