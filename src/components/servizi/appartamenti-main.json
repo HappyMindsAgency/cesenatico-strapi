@@ -42,10 +42,6 @@
       "type": "boolean",
       "default": false
     },
-    "serviziFamily": {
-      "type": "boolean",
-      "default": false
-    },
     "serviziPulizie": {
       "type": "boolean",
       "default": false

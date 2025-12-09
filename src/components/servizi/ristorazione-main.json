@@ -30,7 +30,7 @@
       "type": "boolean",
       "default": false
     },
-    "serviziFamily": {
+    "seggiolone": {
       "type": "boolean",
       "default": false
     },

@@ -38,10 +38,6 @@
       "type": "boolean",
       "default": false
     },
-    "serviziFamily": {
-      "type": "boolean",
-      "default": false
-    },
     "strutturaAccessibile": {
       "type": "boolean",
       "default": false

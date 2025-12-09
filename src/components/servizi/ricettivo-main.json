@@ -42,10 +42,6 @@
       "type": "boolean",
       "default": false
     },
-    "serviziFamily": {
-      "type": "boolean",
-      "default": false
-    },
     "adultsOnly": {
       "type": "boolean",
       "default": false

@@ -447,7 +447,6 @@ export interface ServiziAppartamentiMain extends Struct.ComponentSchema {
     microonde: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziPulizie: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     spaziEsterni: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -594,7 +593,6 @@ export interface ServiziCommercioArtigianatoMain
     prodottiTipici: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     produzione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     spedizione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     strutturaAccessibile: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -689,7 +687,6 @@ export interface ServiziRicettivoMain extends Struct.ComponentSchema {
     piscina: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     ristorazione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziBike: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     serviziSpiaggia: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     serviziSport: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -804,7 +801,7 @@ export interface ServiziRistorazioneMain extends Struct.ComponentSchema {
     parcheggio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     pizzeria: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    serviziFamily: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    seggiolone: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     strutturaAccessibile: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     vistaMare: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
