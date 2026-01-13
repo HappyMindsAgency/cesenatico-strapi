@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_custom_ricorrenzas",
+  "info": {
+    "displayName": "ricorrenza",
+    "icon": "refresh"
+  },
+  "options": {},
+  "attributes": {
+    "ricorrente": {
+      "type": "boolean",
+      "default": false
+    },
+    "giorniRicorrenza": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "ricorrente"
+            },
+            true
+          ]
+        }
+      },
+      "component": "custom.giorni-apertura",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

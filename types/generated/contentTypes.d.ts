@@ -1270,6 +1270,11 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    eventiFigli: Schema.Attribute.Relation<'oneToMany', 'api::evento.evento'>;
+    eventoGenitore: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::evento.evento'
+    >;
     gratuito: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1303,6 +1308,13 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
         };
       }>;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::evento.evento'>;
+    majorEvent: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     operatore: Schema.Attribute.Relation<
       'manyToOne',
       'api::operatore.operatore'
@@ -1327,6 +1339,12 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    ricorrenza: Schema.Attribute.Component<'custom.ricorrenza', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     seo: Schema.Attribute.Component<'seo-component.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

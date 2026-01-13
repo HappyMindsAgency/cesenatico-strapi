@@ -181,6 +181,37 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
+    },
+    "ricorrenza": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "custom.ricorrenza",
+      "repeatable": false
+    },
+    "eventoGenitore": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::evento.evento",
+      "inversedBy": "eventiFigli"
+    },
+    "eventiFigli": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evento.evento",
+      "mappedBy": "eventoGenitore"
+    },
+    "majorEvent": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
     }
   }
 }

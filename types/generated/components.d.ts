@@ -139,6 +139,21 @@ export interface CustomPeriodoApertura extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomRicorrenza extends Struct.ComponentSchema {
+  collectionName: 'components_custom_ricorrenzas';
+  info: {
+    displayName: 'ricorrenza';
+    icon: 'refresh';
+  };
+  attributes: {
+    giorniRicorrenza: Schema.Attribute.Component<
+      'custom.giorni-apertura',
+      false
+    >;
+    ricorrente: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface CustomSezioneTematica extends Struct.ComponentSchema {
   collectionName: 'components_custom_sezione_tematicas';
   info: {
@@ -1259,6 +1274,7 @@ declare module '@strapi/strapi' {
       'custom.mappa': CustomMappa;
       'custom.mezzo-trasporto': CustomMezzoTrasporto;
       'custom.periodo-apertura': CustomPeriodoApertura;
+      'custom.ricorrenza': CustomRicorrenza;
       'custom.sezione-tematica': CustomSezioneTematica;
       'custom.tab-sezioni': CustomTabSezioni;
       'filtri-servizi.filtri-appartamenti': FiltriServiziFiltriAppartamenti;
