@@ -31,9 +31,27 @@ function truncate(text, max = EXCERPT_LENGTH) {
   return text.length > max ? text.slice(0, max).trim() + '…' : text;
 }
 
-function getByPath(obj, path) {
-  if (!obj || !path) return null;
-  return path.split('.').reduce((acc, key) => acc?.[key], obj);
+function getByPath(value, path) {
+  if (!value || !path) return null;
+
+  const parts = path.split('.');
+
+  let current = value;
+
+  for (const part of parts) {
+    if (current === null || current === undefined) return null;
+
+    // 🧠 se è un array → applica ricorsivamente al contenuto
+    if (Array.isArray(current)) {
+      return current
+        .map((item) => getByPath(item, parts.slice(parts.indexOf(part)).join('.')))
+        .filter((v) => v !== null);
+    }
+
+    current = current[part];
+  }
+
+  return current;
 }
 
 function buildPreview(item, model) {
