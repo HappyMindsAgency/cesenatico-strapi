@@ -11,7 +11,7 @@ module.exports = [
   {
     uid: 'api::pagina-autunno.pagina-autunno',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -34,7 +34,7 @@ module.exports = [
   {
     uid: 'api::pagina-cesenatico-dintorni.pagina-cesenatico-dintorni',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -77,7 +77,7 @@ module.exports = [
   {
     uid: 'api::pagina-cesenatico-plus.pagina-cesenatico-plus',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -99,7 +99,7 @@ module.exports = [
   {
     uid: 'api::pagina-come-arrivare.pagina-come-arrivare',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -125,7 +125,7 @@ module.exports = [
   {
     uid: 'api::pagina-contatti.pagina-contatti',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -148,7 +148,7 @@ module.exports = [
   {
     uid: 'api::pagina-cookie-policy.pagina-cookie-policy',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -168,7 +168,7 @@ module.exports = [
   {
     uid: 'api::pagina-cosa-fare.pagina-cosa-fare',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -190,7 +190,7 @@ module.exports = [
   {
     uid: 'api::pagina-dove-dormire.pagina-dove-dormire',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -214,7 +214,7 @@ module.exports = [
   {
     uid: 'api::pagina-dove-mangiare.pagina-dove-mangiare',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -238,7 +238,7 @@ module.exports = [
   {
     uid: 'api::pagina-esplora-il-borgo.pagina-esplora-il-borgo',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -260,7 +260,7 @@ module.exports = [
   {
     uid: 'api::pagina-estate.pagina-estate',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -283,7 +283,7 @@ module.exports = [
   {
     uid: 'api::pagina-eventi.pagina-eventi',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -308,7 +308,7 @@ module.exports = [
   {
     uid: 'api::pagina-experience.pagina-experience',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -332,7 +332,7 @@ module.exports = [
   {
     uid: 'api::pagina-home.pagina-home',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'introTitolo',
@@ -358,7 +358,7 @@ module.exports = [
   {
     uid: 'api::pagina-info-e-servizi-turistici.pagina-info-e-servizi-turistici',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -383,7 +383,7 @@ module.exports = [
   {
     uid: 'api::pagina-inverno.pagina-inverno',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -406,7 +406,7 @@ module.exports = [
   {
     uid: 'api::pagina-mappe-e-brochure.pagina-mappe-e-brochure',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -430,7 +430,7 @@ module.exports = [
   {
     uid: 'api::pagina-newsletter.pagina-newsletter',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -454,7 +454,7 @@ module.exports = [
   {
     uid: 'api::pagina-offerte.pagina-offerte',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -478,7 +478,7 @@ module.exports = [
   {
     uid: 'api::pagina-pianifica-il-tuo-viaggio.pagina-pianifica-il-tuo-viaggio',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -503,7 +503,7 @@ module.exports = [
   {
     uid: 'api::pagina-premium.pagina-premium',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -534,7 +534,7 @@ module.exports = [
   {
     uid: 'api::pagina-primavera.pagina-primavera',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -557,7 +557,7 @@ module.exports = [
   {
     uid: 'api::pagina-privacy-policy.pagina-privacy-policy',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo', 
@@ -577,7 +577,7 @@ module.exports = [
   {
     uid: 'api::pagina-vacanze-accessibili.pagina-vacanze-accessibili',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -603,7 +603,7 @@ module.exports = [
   {
     uid: 'api::pagina-vivi-cesenatico.pagina-vivi-cesenatico',
     kind: 'single',
-    typeLabel: 'Pagina',
+    typeLabel: 'Pagine',
     typeSlug: 'pagina',
     fields: [
       'titolo',
@@ -635,7 +635,7 @@ module.exports = [
   {
     uid: 'api::evento.evento',
     kind: 'collection',
-    typeLabel: 'Evento',
+    typeLabel: 'Eventi',
     typeSlug: 'evento',
     fields: [
       'titolo',
@@ -704,7 +704,7 @@ module.exports = [
   {
     uid: 'api::struttura.struttura',
     kind: 'collection',
-    typeLabel: 'Struttura',
+    typeLabel: 'Strutture',
     typeSlug: 'struttura',
     fields: [
       'titolo',
@@ -738,7 +738,7 @@ module.exports = [
   {
     uid: 'api::articolo.articolo',
     kind: 'collection',
-    typeLabel: 'Articolo',
+    typeLabel: 'Articoli',
     typeSlug: 'articolo',
     priority: 1,
     fields: [
@@ -764,7 +764,7 @@ module.exports = [
   {
     uid: 'api::offerta.offerta',
     kind: 'collection',
-    typeLabel: 'Offerta',
+    typeLabel: 'Offerte',
     typeSlug: 'offerta',
     fields: [
       'titolo', 
@@ -772,14 +772,17 @@ module.exports = [
     ],
     populate: [
       'cover', 
-      'categoria_offerta'
+      'categoria_offerta',
+      'struttura'
     ],
     preview: {
       image: 'cover.formats.medium.url',        // nome del campo media
       titolo: 'titolo',
       excerpt: 'descrizione', // campo testo per riassunto
       data: {
-        categoria_offerta: 'categoria_offerta.titolo'
+        prezzo: 'prezzo',
+        categoria_offerta: 'categoria_offerta.titolo',
+        struttura: 'struttura.slug'
       },
       slug: 'slug'
     },
@@ -813,7 +816,7 @@ module.exports = [
   {
     uid: 'api::poi.poi',
     kind: 'collection',
-    typeLabel: 'Luogo',
+    typeLabel: 'Luoghi',
     typeSlug: 'poi',
     fields: [
       'titolo',
