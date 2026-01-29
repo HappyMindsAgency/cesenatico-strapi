@@ -799,14 +799,17 @@ module.exports = [
       'descrizione'
     ],
     populate: [
-      'categoria_downloads'
+      'categoria_downloads',
+      'file'
     ],
     preview: {
       image: null,        // nome del campo media
       titolo: 'titolo',
       excerpt: 'descrizione', // campo testo per riassunto
       data: {
-        categoria_downloads: 'categoria_downloads.titolo'
+        categoria_downloads: 'categoria_downloads.titolo',
+        file_size: 'file.size',
+        file_url: 'file.url',
       },
       slug: 'slug'
     },
