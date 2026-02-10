@@ -656,7 +656,8 @@ module.exports = [
       data: {
         dataInizio: 'dataInizio', 
         dataFine: 'dataFine', 
-        categoria_evento: 'categoria_evento.titolo'
+        categoria_evento: 'categoria_evento.titolo',
+        majorEvent: 'majorEvent'
       },
       slug: 'slug'
     },
