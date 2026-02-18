@@ -80,6 +80,7 @@ export interface CustomInEvidenza extends Struct.ComponentSchema {
   };
   attributes: {
     inCategoria: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    inElenco: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     inHome: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     inStagione: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };

@@ -17,6 +17,10 @@
     "inStagione": {
       "type": "boolean",
       "default": false
+    },
+    "inElenco": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}
