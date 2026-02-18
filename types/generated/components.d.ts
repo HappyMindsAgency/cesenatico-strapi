@@ -27,6 +27,17 @@ export interface CustomCtaPremium extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomDataRicorrenza extends Struct.ComponentSchema {
+  collectionName: 'components_custom_data_ricorrenzas';
+  info: {
+    displayName: 'dataRicorrenza';
+    icon: 'calendar';
+  };
+  attributes: {
+    data: Schema.Attribute.Date;
+  };
+}
+
 export interface CustomGiorniApertura extends Struct.ComponentSchema {
   collectionName: 'components_custom_giorni_aperturas';
   info: {
@@ -146,6 +157,7 @@ export interface CustomRicorrenza extends Struct.ComponentSchema {
     icon: 'refresh';
   };
   attributes: {
+    dataRicorrenza: Schema.Attribute.Component<'custom.data-ricorrenza', true>;
     giorniRicorrenza: Schema.Attribute.Component<
       'custom.giorni-apertura',
       false
@@ -1267,6 +1279,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'custom.componente-tematica': CustomComponenteTematica;
       'custom.cta-premium': CustomCtaPremium;
+      'custom.data-ricorrenza': CustomDataRicorrenza;
       'custom.giorni-apertura': CustomGiorniApertura;
       'custom.header-hero': CustomHeaderHero;
       'custom.in-evidenza': CustomInEvidenza;

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_custom_data_ricorrenzas",
+  "info": {
+    "displayName": "dataRicorrenza",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "data": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

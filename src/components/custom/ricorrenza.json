@@ -24,6 +24,21 @@
       },
       "component": "custom.giorni-apertura",
       "repeatable": false
+    },
+    "dataRicorrenza": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "ricorrente"
+            },
+            false
+          ]
+        }
+      },
+      "component": "custom.data-ricorrenza",
+      "repeatable": true
     }
   },
   "config": {}
