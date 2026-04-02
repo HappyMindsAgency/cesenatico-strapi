@@ -316,6 +316,12 @@
       },
       "component": "seo-component.seo",
       "repeatable": false
+    },
+    "strutture_partner": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::struttura.struttura",
+      "inversedBy": "experience_sponsor"
     }
   }
 }

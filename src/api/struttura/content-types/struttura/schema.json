@@ -288,6 +288,18 @@
       },
       "component": "custom.giorni-apertura",
       "repeatable": false
+    },
+    "eventi": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::evento.evento",
+      "mappedBy": "struttura"
+    },
+    "experience_sponsor": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "strutture_partner"
     }
   }
 }

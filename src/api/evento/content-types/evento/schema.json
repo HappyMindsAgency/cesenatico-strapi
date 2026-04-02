@@ -212,6 +212,12 @@
         }
       },
       "default": false
+    },
+    "struttura": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::struttura.struttura",
+      "inversedBy": "eventi"
     }
   }
 }

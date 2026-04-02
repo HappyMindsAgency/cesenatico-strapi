@@ -1365,6 +1365,10 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::stagionalita.stagionalita'
     >;
+    struttura: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::struttura.struttura'
+    >;
     titolo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1596,6 +1600,10 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
       'api::stagionalita.stagionalita'
     >;
     struttura: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::struttura.struttura'
+    >;
+    strutture_partner: Schema.Attribute.Relation<
       'manyToMany',
       'api::struttura.struttura'
     >;
@@ -4738,7 +4746,12 @@ export interface ApiStrutturaStruttura extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    eventi: Schema.Attribute.Relation<'oneToMany', 'api::evento.evento'>;
     experience: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::experience.experience'
+    >;
+    experience_sponsor: Schema.Attribute.Relation<
       'manyToMany',
       'api::experience.experience'
     >;
