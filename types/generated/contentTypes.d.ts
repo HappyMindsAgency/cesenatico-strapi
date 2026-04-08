@@ -430,6 +430,36 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAiAssistantAiAssistant extends Struct.SingleTypeSchema {
+  collectionName: 'ai_assistants';
+  info: {
+    displayName: '00. AI Assistant';
+    pluralName: 'ai-assistants';
+    singularName: 'ai-assistant';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-assistant.ai-assistant'
+    > &
+      Schema.Attribute.Private;
+    promptAssistant: Schema.Attribute.RichText;
+    publishedAt: Schema.Attribute.DateTime;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'00. AI Assistant'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAoPrivacyPolicyAoPrivacyPolicy
   extends Struct.SingleTypeSchema {
   collectionName: 'ao_privacy_policies';
@@ -5514,6 +5544,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::ai-assistant.ai-assistant': ApiAiAssistantAiAssistant;
       'api::ao-privacy-policy.ao-privacy-policy': ApiAoPrivacyPolicyAoPrivacyPolicy;
       'api::ao-termini-condizioni.ao-termini-condizioni': ApiAoTerminiCondizioniAoTerminiCondizioni;
       'api::articolo.articolo': ApiArticoloArticolo;

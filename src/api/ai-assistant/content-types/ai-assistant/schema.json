@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_assistants",
+  "info": {
+    "singularName": "ai-assistant",
+    "pluralName": "ai-assistants",
+    "displayName": "00. AI Assistant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "default": "00. AI Assistant"
+    },
+    "promptAssistant": {
+      "type": "richtext"
+    }
+  }
+}
