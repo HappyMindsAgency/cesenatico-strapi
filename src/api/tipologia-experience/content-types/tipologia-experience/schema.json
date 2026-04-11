@@ -35,7 +35,7 @@
     },
     "experience": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::experience.experience",
       "mappedBy": "tipologia_experience"
     }

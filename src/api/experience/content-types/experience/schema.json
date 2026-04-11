@@ -276,7 +276,7 @@
     },
     "tipologia_experience": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::tipologia-experience.tipologia-experience",
       "inversedBy": "experience"
     },

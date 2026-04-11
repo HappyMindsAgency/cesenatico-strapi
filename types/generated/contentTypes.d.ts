@@ -1638,7 +1638,7 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
       'api::struttura.struttura'
     >;
     tipologia_experience: Schema.Attribute.Relation<
-      'manyToOne',
+      'manyToMany',
       'api::tipologia-experience.tipologia-experience'
     >;
     titolo: Schema.Attribute.String &
@@ -4957,7 +4957,7 @@ export interface ApiTipologiaExperienceTipologiaExperience
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     experience: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::experience.experience'
     >;
     locale: Schema.Attribute.String;
