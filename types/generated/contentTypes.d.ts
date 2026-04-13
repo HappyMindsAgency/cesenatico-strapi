@@ -460,6 +460,56 @@ export interface ApiAiAssistantAiAssistant extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAoPartnershipPolicyAoPartnershipPolicy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ao_partnership_policies';
+  info: {
+    displayName: '07.01.03 AO Partnership Policy';
+    pluralName: 'ao-partnership-policies';
+    singularName: 'ao-partnership-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    contenuto: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ao-partnership-policy.ao-partnership-policy'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo-component.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    titolo: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAoPrivacyPolicyAoPrivacyPolicy
   extends Struct.SingleTypeSchema {
   collectionName: 'ao_privacy_policies';
@@ -5545,6 +5595,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::ai-assistant.ai-assistant': ApiAiAssistantAiAssistant;
+      'api::ao-partnership-policy.ao-partnership-policy': ApiAoPartnershipPolicyAoPartnershipPolicy;
       'api::ao-privacy-policy.ao-privacy-policy': ApiAoPrivacyPolicyAoPrivacyPolicy;
       'api::ao-termini-condizioni.ao-termini-condizioni': ApiAoTerminiCondizioniAoTerminiCondizioni;
       'api::articolo.articolo': ApiArticoloArticolo;
